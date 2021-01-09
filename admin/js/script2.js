@@ -31,4 +31,22 @@ var div_box="<div id='load-screen'><div id='loading1'><div id='loading'></div></
 
     });
     
+    
 });
+
+function loadusers(){
+    
+    
+    $.get("functions.php?useronline=result",function(data){
+        
+        $(".useronline").text(data);
+        
+        
+    });
+    
+    
+    
+}
+setInterval(function(){
+    loadusers();
+},500);
