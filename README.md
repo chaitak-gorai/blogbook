@@ -7,7 +7,7 @@ You can register as a blogger, login to the admin, create post,publish it, view 
 This is totally dynamic. All data are fetched on realtime using MySQL queries.
 
 I wiil be very grateful if you review my code and feel free to find bugs and issues. It will be great to merge some codes.
-Live Project Link- https://blogbook.epizy.com/cms
+Live Project Link- https://blogbook-blog.herokuapp.com/
 
 Thank You
 
