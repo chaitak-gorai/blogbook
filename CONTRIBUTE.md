@@ -1,3 +1,6 @@
+# Blogbook- Contributions
+
+
 ## Prequisites
 * [Git](https://git-scm.com/downloads) 
 * [XAMPP](https://www.apachefriends.org/download.html)
@@ -20,3 +23,8 @@
 8. You can now run the site by 
    * Either paste the whole code in htdocs of Xampp and run localhost/blogbook in new tab
    * Or open the blogbook folder in vs code, install php server exstension,right click on index file and select open server.
+
+
+## Commmiting to this repo.
+ 1. While commiting please create a branch in your name/issue name and then commit. **DO NOT COMMIT TO MASTER BRANCH**
+ 2. After a successful contribution, you can add your name to Contributors.md 
