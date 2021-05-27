@@ -2,13 +2,25 @@
 Blogbook- Content Management System Project
 
 Hello,
-This is my first big project. It is CONTENT MANAGEMENT SYSTEM project using PHP.
+Welcome to Blogbook
+This is a CONTENT MANAGEMENT SYSTEM project using PHP.
 You can register as a blogger, login to the admin, create post,publish it, view comments etc.
 This is totally dynamic. All data are fetched on realtime using MySQL queries.
 
-I wiil be very grateful if you review my code and feel free to find bugs and issues. It will be great to merge some codes.
-Live Project Link- https://blogbook-blog.herokuapp.com/
+## Contribute
+   ### Jump to - [Contribute.md](https://github.com/chaitak-gorai/blogbook/blob/main/CONTRIBUTE.md)
+Why not start your open source journey by merging some codes here. It will be very great if you review the code and  find some bugs and issues.
 
-Thank You
+ ### Ways to Contribute
+  * Find a bug by running the project locally
+  * Solve the [issues](github.com/chaitak-gorai/blogbook/issues) which are already set up
+  * Sugget some change or create your own isssue
+  *  Create documentation like site structure, how to write a blog,etc
+  *  Indent/Beautify/Modify codes.
+
+
+
+Live Project Link- https://blogbook-blog.herokuapp.com/
+Thank You!
 
 
