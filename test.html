@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_ctUkVZSQhl8tJdwn5OV7N');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                this.from_name.value = document.getElementById('name').value;
+                this.reply_to.value = document.getElementById('email').value;
+       
+
+                // these IDs from the previous steps
+                emailjs.sendForm('service_jqqodmg', 'template_3d56csi',this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <form id="contact-form">
+        <input type="hidden" name="contact_number" >
+        <label>Name</label>
+        <input type="text" name="from_name" id="name">
+        <label>Email</label>
+        <input type="email" name="reply_to" id="email">
+        <label>Message</label>
+        <textarea name="message" id="msg"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
