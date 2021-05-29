@@ -82,7 +82,7 @@
          let t = 0;
 
          function validate_form() {
-
+            event.preventDefault();
              const user = document.getElementById('username').value;
              const email = document.getElementById('email').value;
              const pass = document.getElementById('key').value;
@@ -95,7 +95,7 @@
                  console.log('prev');
                  const fo = document.getElementById('regis-form');
                  console.log('123');
-                 event.preventDefault();
+                 
                  fo.contact_number.value = Math.random() * 100000 | 0;
                  emailjs.sendForm('service_jqqodmg', 'template_khp9f0v', fo)
                      .then(function() {
