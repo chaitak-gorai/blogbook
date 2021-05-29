@@ -20,7 +20,7 @@ Why not start your open source journey by merging some codes here. It will be ve
 
 
 
-Live Project Link- https://blogbook-blog.herokuapp.com/
+
 Thank You!
 
 
