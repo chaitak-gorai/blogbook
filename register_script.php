@@ -22,7 +22,7 @@ $password = base64_encode($password);
 //    $password=base64_encode($password);
 // 
 
-$query = "INSERT INTO users(username,user_email,user_password,user_role) ";
+$query = "INSERT INTO DFc7onUv5f.users(username,user_email,user_password,user_role) ";
 $query .= "VALUES('{$username}','{$email}','{$password}','new')";
 $register_user_query = mysqli_query($connection, $query);
 

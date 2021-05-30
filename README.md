@@ -1,4 +1,4 @@
-# Blogbook
+# Blogbook ® 
 Blogbook- Content Management System Project
 
 Hello,
@@ -19,8 +19,11 @@ Why not start your open source journey by merging some codes here. It will be ve
   *  Indent/Beautify/Modify codes.
 
 
+### Live project link
+https://blogbook-blog.herokuapp.com/
 
-Live Project Link- https://blogbook-blog.herokuapp.com/
+Since this project is still in development stage so you might find bugs and also the blog posts are dummy.
+
 Thank You!
 
 
