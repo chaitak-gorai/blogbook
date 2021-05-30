@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
     <section id="login">
         <div class="container">
             <div class="row">
-                <div class="col-xs-6 col-xs-offset-3">
+                <div class="col-md-10 col-md-offset-1">
 
                     <div class="form-wrap">
                         <h1 class="head">Contact Us</h1>

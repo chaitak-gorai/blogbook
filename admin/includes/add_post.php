@@ -1,34 +1,27 @@
+<?php
 
-    
-                   <?php
+if (isset($_POST['create_post'])) {
 
-if(isset($_POST['create_post'])){
-    
-             $post_content=mysqli_real_escape_string($connection,$_POST['post_content']);
-             $post_author=$_POST['post_author'];
-             $post_title=$_POST['post_title'];
-             $post_category_id=$_POST['post_category'];
-             $post_image=$_FILES['image']['name'];
-             $post_image_temp=$_FILES['image']['tmp_name'];
-             $post_tags=$_POST['post_tags'];
-//             $post_comment_count=4;
-             $post_date=date('d-m-y');
-             $post_status=$_POST['post_status'];
-$author_id=$_SESSION['user_id'];
+    $post_content = mysqli_real_escape_string($connection, $_POST['post_content']);
+    $post_author = $_POST['post_author'];
+    $post_title = $_POST['post_title'];
+    $post_category_id = $_POST['post_category'];
+    $post_image = $_FILES['image']['name'];
+    $post_image_temp = $_FILES['image']['tmp_name'];
+    $post_tags = $_POST['post_tags'];
+    $post_comment_count = 0;
+    $post_date = date('d-m-y');
+    $post_status = $_POST['post_status'];
+    $author_id = $_SESSION['user_id'];
     move_uploaded_file($post_image_temp, "../images/$post_image");
-    
-    $query="INSERT INTO posts(post_category_id,post_title,post_author,author_id,post_date,post_image,post_content,post_tags,post_status) VALUES({$post_category_id},'{$post_title}','{$post_author}','{$author_id}',now(),'{$post_image}','{$post_content}','{$post_tags}','{$post_status}')";
- $add=mysqli_query($connection,$query);   
 
-    
-  confirm($add);
-$view_post_id=mysqli_insert_id($connection);
-echo "<p class='bg-success'>Post Created..<a href='../post.php?p_id={$view_post_id}'>View Post</a> or<a href='posts.php?source=add_post'>Edit More Posts</a></p>";
+    $query = "INSERT INTO posts(post_category_id,post_title,post_author,author_id,post_date,post_image,post_content,post_tags,post_status) VALUES({$post_category_id},'{$post_title}','{$post_author}','{$author_id}',now(),'{$post_image}','{$post_content}','{$post_tags}','{$post_status}')";
+    $add = mysqli_query($connection, $query);
 
 
-
-
-
+    confirm($add);
+    $view_post_id = mysqli_insert_id($connection);
+    echo "<p class='bg-success'>Post Created..<a href='../post.php?p_id={$view_post_id}'>View Post</a> or<a href='posts.php?source=add_post'>Edit More Posts</a></p>";
 }
 
 
@@ -38,12 +31,12 @@ echo "<p class='bg-success'>Post Created..<a href='../post.php?p_id={$view_post_
 
 
 ?>
-    
 
-    
-    
-    
-    <form action="" method="post" enctype="multipart/form-data">
+
+
+
+
+<form action="" method="post" enctype="multipart/form-data">
 
     <div class="form-group">
         <label for="title">Post Title</label>
@@ -51,22 +44,21 @@ echo "<p class='bg-success'>Post Created..<a href='../post.php?p_id={$view_post_
     </div>
 
     <div class="form-group">
-     <select name="post_category" id="">
-        <?php
-            
-              $query="SELECT * FROM categories" ;                   $select_categories=mysqli_query($connection,$query);  
-               
-//               confirm($select_categories);
-                    while($row=mysqli_fetch_assoc($select_categories)){
-                       
-                        $cat_id=$row['cat_id'];
-                         $cat_title=$row['cat_title'];
-                    echo "<option value='$cat_id'>{$cat_title}</option>";
-                    
-                    
-                    }
-                         
-            
+        <select name="post_category" id="">
+            <?php
+
+            $query = "SELECT * FROM categories";
+            $select_categories = mysqli_query($connection, $query);
+
+            //               confirm($select_categories);
+            while ($row = mysqli_fetch_assoc($select_categories)) {
+
+                $cat_id = $row['cat_id'];
+                $cat_title = $row['cat_title'];
+                echo "<option value='$cat_id'>{$cat_title}</option>";
+            }
+
+
             ?>
         </select>
     </div>
@@ -77,14 +69,15 @@ echo "<p class='bg-success'>Post Created..<a href='../post.php?p_id={$view_post_
     </div>
 
 
-<div class="form-group">
-<select name="post_status" id="">
-    
-   <option value="draft">Post Status</option>
-   <option value="draft">Draft</option>
-   <option value="published">Publish</option>
-    
-</select></div>
+    <div class="form-group">
+        <select name="post_status" id="">
+
+            <option value="draft">Post Status</option>
+            <option value="draft">Draft</option>
+            <option value="published">Publish</option>
+
+        </select>
+    </div>
 
     <div class="form-group">
         <label for="post_image">Post Image</label>
@@ -108,8 +101,3 @@ echo "<p class='bg-success'>Post Created..<a href='../post.php?p_id={$view_post_
 
 
 </form>
-
-
-
-
-

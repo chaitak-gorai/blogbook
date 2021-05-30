@@ -38,13 +38,18 @@
                     <input name="password" type="password" class="form-control" placeholder="Enter Password" id="user_pass">
                     <span class="input-group-btn">
                         <button class="btn btn-primary" name="login" type="submit">
-                            Submit
+                            Login
                         </button>
 
                     </span>
 
                 </div>
             </form>
+            <h4 style="text-align: center;">OR</h4>
+            <a href="../registration.php">
+                <button class="btn btn-success form-control" name="login" type="submit" value="Register">
+                    Register
+                </button> </a>
 
             <!-- /.input-group -->
         </div>

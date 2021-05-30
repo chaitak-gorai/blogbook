@@ -19,8 +19,8 @@
      <section id="login">
          <div class="container">
              <div class="row">
-                 <div class="col-xs-6 col-xs-offset-3">
-                     <div class="form-wrap">
+                 <div class="col-md-10 col-md-offset-1">
+                     <div class="form-wrap" style="text-align: center;">
                          <h1 class="head">Register</h1>
                          <form role="form" action="registration.php" method="post" id="regis-form" autocomplete="off" onsubmit=" validate_form()">
                              <!-- <?php echo $message; ?> -->
@@ -38,7 +38,7 @@
                                  <input type="password" name="password" id="key" class="form-control" placeholder="Password">
                              </div>
 
-                             <input type="submit" name="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Register">
+                             <input type="submit" name="submit" id="btn-login" class="btn btn-success btn-lg btn-block" value="Register">
 
                          </form>
 
@@ -82,7 +82,7 @@
          let t = 0;
 
          function validate_form() {
-            event.preventDefault();
+             event.preventDefault();
              const user = document.getElementById('username').value;
              const email = document.getElementById('email').value;
              const pass = document.getElementById('key').value;
@@ -95,7 +95,7 @@
                  console.log('prev');
                  const fo = document.getElementById('regis-form');
                  console.log('123');
-                 
+
                  fo.contact_number.value = Math.random() * 100000 | 0;
                  emailjs.sendForm('service_jqqodmg', 'template_khp9f0v', fo)
                      .then(function() {
