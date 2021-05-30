@@ -1,4 +1,4 @@
-# Blogbook
+# Blogbook ® 
 Blogbook- Content Management System Project
 
 Hello,
