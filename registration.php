@@ -21,7 +21,7 @@
              <div class="row">
                  <div class="col-md-10 col-md-offset-1">
                      <div class="form-wrap" style="text-align: center;">
-                         <h1 class="head">Register</h1>
+                         <h1 class="head wt">Register</h1>
                          <form role="form" action="registration.php" method="post" id="regis-form" autocomplete="off" onsubmit=" validate_form()">
                              <!-- <?php echo $message; ?> -->
                              <div class="form-group">

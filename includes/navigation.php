@@ -1,10 +1,36 @@
+<!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Start Bootstrap</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex2-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+
+
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
 
 
         <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex2-collapse" style="margin: 5px;">
 
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>

@@ -1,13 +1,34 @@
  <!-- Footer -->
+ <style>
+     .credits {
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: #ffa4bd;
+         font-family: 'Roboto Condensed', sans-serif;
+         font-size: 16px;
+         font-weight: normal;
+     }
+ </style>
  <footer>
+
+     <div class="col-lg-12 credits ">
+         Blogbook &copy 2021
+
+     </div>
+
+ </footer>
+ <!-- <footer>
+
      <div class="row">
          <div class="col-lg-12">
              <p>Copyright &copy; Blogbook 2020</p>
          </div>
-         <!-- /.col-lg-12 -->
+        
      </div>
-     <!-- /.row -->
- </footer>
+   
+ </footer> -->
 
  </div>
  <!-- /.container -->
@@ -18,6 +39,7 @@
  <!-- Bootstrap Core JavaScript -->
  <script src="js/bootstrap.min.js"></script>
  <script src="js/script2.js"></script>
+
 
  </body>
 
