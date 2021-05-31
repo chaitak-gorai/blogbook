@@ -29,7 +29,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        body {
+            /* background: linear-gradient(to right, #525252 0%, #3d72b4 100%); */
+            background: linear-gradient(to right, #360033 0%, #0b8793 100%);
 
+
+            font-size: 12px;
+        }
+    </style>
 </head>
 
 <?php
@@ -82,7 +90,7 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-10 col-md-offset-1">
 
                     <div class="form-wrap">
-                        <h1 class="head">Contact Us</h1>
+                        <h1 class="head wt">Contact Us</h1>
                         <form role="form" action="" method="post" id="login-form" autocomplete="off">
                             <input type="hidden" name="contact_number">
                             <div class="form-group">
@@ -117,14 +125,28 @@ if (isset($_POST['submit'])) {
 
 
 
-<div class="row">
-    <div class="col-lg-12">
-        <p>Copyright &copy; Blogbook 2020</p>
+<style>
+    .credits {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffa4bd;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }
+</style>
+<footer>
+
+    <div class="col-lg-12 credits ">
+        Blogbook &copy 2021
+
     </div>
-    <!-- /.col-lg-12 -->
-</div>
-<!-- /.row -->
+
 </footer>
+<!-- /.row -->
+
 
 </div>
 <!-- /.container -->
