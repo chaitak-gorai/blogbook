@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
 
-                    <div class="form-wrap">
+                    <div class="form-wrap wt">
                         <h1 class="head wt">Contact Us</h1>
                         <form role="form" action="" method="post" id="login-form" autocomplete="off">
                             <input type="hidden" name="contact_number">
