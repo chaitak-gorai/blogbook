@@ -23,7 +23,7 @@
 
      <div class="row">
          <div class="col-lg-12">
-             <p>Copyright &copy; Blogbook 2020</p>
+             <p>Copyright &copy; Blogbook 2021</p>
          </div>
         
      </div>
