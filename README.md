@@ -18,7 +18,9 @@ Why not start your open source journey by merging some codes here. It will be ve
   *  Create documentation like site structure, how to write a blog,etc
   *  Indent/Beautify/Modify codes.
 
-
+### List of Contributors
+   Jump to [Contributors.md](https://github.com/chaitak-gorai/blogbook/blob/main/contributors.md)
+   
 ### Live project link
 https://blogbook-blog.herokuapp.com/
 
