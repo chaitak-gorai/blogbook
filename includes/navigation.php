@@ -41,7 +41,7 @@ color:white;">
             <a class="navbar-brand" href="index.php">Blogbook</a>
             <a class="navbar-brand " title="Already Register?" href='index.php#login'>Login</a>
             <a class="navbar-brand  " title="Login First" href='admin/index.php' onclick="return admin()">Admin</a>
-            <div class="head"></div>
+            <div class="heads"></div>
 
         </div>
 
@@ -153,15 +153,15 @@ color:white;">
 <script>
     function showErrors(error, alrt) {
 
-        const card = document.querySelector('.xyz');
-        const head = document.querySelector('.head');
+        const cards = document.querySelector('.xyz');
+        const heads = document.querySelector('.heads');
 
 
-        const errordiv = document.createElement('div');
+        const errordivs = document.createElement('div');
 
-        errordiv.className = alrt;
-        errordiv.appendChild(document.createTextNode(error));
-        card.insertBefore(errordiv, head);
+        errordivs.className = alrt;
+        errordivs.appendChild(document.createTextNode(error));
+        cards.insertBefore(errordivs, heads);
 
         setTimeout(clearError, 3000);
 

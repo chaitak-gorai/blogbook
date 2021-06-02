@@ -14,10 +14,10 @@
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row xyz">
+        <div class="row ">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-8 head">
+            <div class="col-md-8 ">
                 <h1 class="text-center" style="color:white;">Welcome to Blogbook</h1>
                 <?php
                 $results_per_page = 5;
