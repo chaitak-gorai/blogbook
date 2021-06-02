@@ -1,73 +1,17 @@
 <?php include "includes/db.php"; ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Blog Home - Start Bootstrap Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/blog-home.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-
-
-
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        body {
-            /* background: linear-gradient(to right, #525252 0%, #3d72b4 100%); */
-            background: linear-gradient(to right, #360033 0%, #0b8793 100%);
-
-
-            font-size: 12px;
-        }
-    </style>
-</head>
+<?php include "includes/header.php"; ?>
 
 <?php
 
 
-
-
-
 if (isset($_POST['submit'])) {
 
+    $to = "captcha.c14@gmail.com";
+    $subject = $_POST['subject'];
+    $body = $_POST['body'];
 
-    $username = $_POST['from_name'];
-    $email = $_POST['reply_to'];
-    $sub = $_POST['subject'];
-    $message = $_POST['message'];
-
-    if (!empty($username) && !empty($email) && !empty($sub) && !empty($message)) {
-
-        $t = "send";
-    } else {
-        $t = "error";
-    };
-};
-
-
-
-
-
-
-
+    mail($to, $subject, $body);
+}
 
 ?>
 
@@ -78,86 +22,72 @@ if (isset($_POST['submit'])) {
 
 <!-- Navigation -->
 
+<link href="css/form_style.css" rel="stylesheet">
+
+
 <?php include "includes/navigation.php"; ?>
-
-
 <!-- Page Content -->
-<div class="container">
-
-    <section id="login">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-
-                    <div class="form-wrap wt">
-                        <h1 class="head wt">Contact Us</h1>
-                        <form role="form" action="" method="post" id="login-form" autocomplete="off">
-                            <input type="hidden" name="contact_number">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" name="from_name" id="name" class="form-control" placeholder="Enter Your Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" name="reply_to" id="email" class="form-control" placeholder="Enter Your Email">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="Text" name="subject" id="subject" class="form-control" placeholder="Enter a Subject">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Message</label>
-                                <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Enter Your message"></textarea>
-                            </div>
-
-                            <input type="submit" name="submit" id="btn-login" class="btn btn-primary btn-lg btn-block" value="Send">
-                        </form>
-
+<div class="background">
+    <div class="container1">
+        <div class="screen">
+            <div class="screen-header">
+                <div class="screen-header-left">
+                    <div class="screen-header-button close"></div>
+                    <div class="screen-header-button maximize"></div>
+                    <div class="screen-header-button minimize"></div>
+                </div>
+                <div class="screen-header-right">
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                </div>
+            </div>
+            <div class="screen-body">
+                <div class="screen-body-item left">
+                    <div class="app-title">
+                        <span>CONTACT </span>
+                        <span>US</span>
+                    </div>
+                    <div class="app-contact">Always there to help you</div>
+                </div>
+                <div class="screen-body-item">
+                    <div class="app-form">
+                        <div class="head">
+                            <form action="" role="form" method="post" id="login-form">
+                                <div class="app-form-group">
+                                    <input type="hidden" name="contact_number">
+                                    <label for="name" style="color: white;">Name</label>
+                                    <input type="text" name="from_name" id="name" class="app-form-control" placeholder="Full Name">
+                                </div>
+                                <div class="app-form-group">
+                                    <label for="name" style="color: white;">Email</label>
+                                    <input type="email" name="reply_to" id="email" class="app-form-control" placeholder="Email- for reply">
+                                </div>
+                                <div class="app-form-group">
+                                    <label for="name" style="color: white;">Subject</label>
+                                    <input type="Text" name="subject" id="subject" class="app-form-control" placeholder="Subject">
+                                </div>
+                                <div class="app-form-group message ">
+                                    <!-- <input class="app-form-control" placeholder="MESSAGE"> -->
+                                    <label for="name" style="color: white;">Message</label>
+                                    <textarea name="message" id="message" class="app-form-control" cols="50" rows="5" placeholder="MESSAGE"></textarea>
+                                </div>
+                                <div class="app-form-group buttons">
+                                    <input class="app-form-button" id="reset" value="Reset" type="button" name="reset" onclick="clearForm()">
+                                    <input type="submit" name="submit" id="btn-login" value="Send" class="app-form-button">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div> <!-- /.col-xs-12 -->
-        </div> <!-- /.row -->
-</div> <!-- /.container -->
-</section>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
 <hr>
-
-
-
-<style>
-    .credits {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffa4bd;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 16px;
-        font-weight: normal;
-    }
-</style>
-<footer>
-
-    <div class="col-lg-12 credits ">
-        Blogbook &copy 2021
-
-    </div>
-
-</footer>
-<!-- /.row -->
-
-
-</div>
-<!-- /.container -->
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-
-<script src="js/script2.js"></script>
-
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js'></script>
 <script type='text/javascript'>
     (function() {
@@ -166,9 +96,16 @@ if (isset($_POST['submit'])) {
     })();
 </script>
 <script>
+    function clearForm() {
+        const name = document.getElementById('name').value = "";
+        const email = document.getElementById('email').value = "";
+        const sub = document.getElementById('subject').value = "";
+        const msg = document.getElementById('message').value = "";
+    }
+
     function showError(error, alrt) {
 
-        const card = document.querySelector('.form-wrap');
+        const card = document.querySelector('.app-form');
         const head = document.querySelector('.head');
 
 
@@ -206,14 +143,15 @@ if (isset($_POST['submit'])) {
                     console.log('FAILED...', error);
                 });
             showError('Received! Thanks for your message', 'alert alert-success');
+            clearForm();
 
         } else {
             showError('Fields Cannot be Empty!', 'alert alert-danger');
 
         }
+
     });
 </script>
 
-</body>
 
-</html>
+<?php include "includes/footer.php"; ?>
