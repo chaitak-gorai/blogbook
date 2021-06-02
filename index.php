@@ -138,7 +138,7 @@
                                     </div>
                                     <div class="blog-card__info">
 
-                                        <h5 style=" font-size: x-large; font-weight: 600; font-stretch: extra-expanded; "><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?> </a>
+                                        <h5 style=" font-size: x-large; font-weight: 600; font-stretch: extra-expanded; overflow-wrap:break-word; "><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?> </a>
                                             <div style="text-align:right;
                                         float:right;">
                                                 <button type="button" class="btn btn-sml btn-dark"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></button>

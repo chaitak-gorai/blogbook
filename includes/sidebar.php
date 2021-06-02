@@ -76,7 +76,9 @@
                     while ($row = mysqli_fetch_assoc($select_categories_sidebar)) {
                         $cat_title = $row['cat_title'];
                         $cat_id = $row['cat_id'];
-                        echo "<li><a href='category.php?category=$cat_id'>{$cat_title}</a></li>";
+                        echo "<li   class='list-items'
+                        data-aos='fade-left'
+                        data-aos-delay='100'><a href='category.php?category=$cat_id'>{$cat_title}</a></li>";
                     }
 
                     ?>
@@ -93,6 +95,12 @@
     <!-- Side Widget Well -->
     <?php include "widget.php" ?>
 </div>
+<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+    })
+</script>
 <script>
     function showError(error, alrt) {
 
