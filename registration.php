@@ -22,9 +22,10 @@
         <div class="screen">
             <div class="screen-header">
                 <div class="screen-header-left">
-                    <div class="screen-header-button close"></div>
+
                     <div class="screen-header-button maximize"></div>
                     <div class="screen-header-button minimize"></div>
+                    <div class="screen-header-button close1"></div>
                 </div>
                 <div class="screen-header-right">
                     <div class="screen-header-ellipsis"></div>
