@@ -120,7 +120,9 @@
                                     <div class="blog-card__background">
                                         <div class="card__background--wrapper">
 
-                                            <div class="card__background--main" style="background-image: url('images/<?php echo $post_image; ?>');">
+                                            <!-- <div class="card__background--main" style="background-image: url('images/<?php echo $post_image; ?>');"> -->
+                                            <div class="card__background--main">
+                                                <img src="images/<?php echo $post_image; ?>" alt="" style="  max-width: 100%;     height: fit-content;">
                                                 <div class="card__background--layer"></div>
 
                                             </div>
