@@ -24,13 +24,13 @@
 
 
 
-<nav class="navbar  " role="navigation" style="background-color: rgba(0,0,0,)!important;
+<nav class="navbar   " role="navigation" style="background-color: rgba(0,0,0,)!important;
 color:white;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
 
 
-        <div class="navbar-header">
+        <div class="navbar-header xyz">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex2-collapse" style="margin: 5px;">
 
                 <span class="sr-only">Toggle Navigation</span>
@@ -39,8 +39,9 @@ color:white;">
                 <span class="icon-bar" style="background-color: white;"></span>
             </button>
             <a class="navbar-brand" href="index.php">Blogbook</a>
-            <a class="navbar-brand" title="Already Register?" href='index.php#login'>Login</a>
-            <a class="navbar-brand" title="Login First" href='admin/index.php'>Admin</a>
+            <a class="navbar-brand " title="Already Register?" href='index.php#login'>Login</a>
+            <a class="navbar-brand  " title="Login First" href='admin/index.php' onclick="return admin()">Admin</a>
+            <div class="head"></div>
 
         </div>
 
@@ -50,10 +51,10 @@ color:white;">
 
 
 
-            <div class="container collapse navbar-collapse navbar-ex2-collapse" style="float: right; height: 1px;">
+            <div class="container collapse navbar-collapse navbar-ex2-collapse " style="float: right; height: 1px;">
 
 
-                <a class="navbar-brand" title="New User?" href='registration.php'>Register</a>
+                <a class="navbar-brand " title="New User?" href='registration.php'>Register</a>
                 <a class="navbar-brand" title="New User?" href='contact.php'>Contact</a>
 
                 <?php
@@ -146,3 +147,37 @@ color:white;">
     </div>
     <!--         /.container -->
 </nav>
+
+
+
+<script>
+    function showErrors(error, alrt) {
+
+        const card = document.querySelector('.xyz');
+        const head = document.querySelector('.head');
+
+
+        const errordiv = document.createElement('div');
+
+        errordiv.className = alrt;
+        errordiv.appendChild(document.createTextNode(error));
+        card.insertBefore(errordiv, head);
+
+        setTimeout(clearError, 3000);
+
+    }
+
+    function clearError() {
+        document.querySelector('.alert').remove();
+    }
+
+    function admin() {
+        <?php $session_value = (isset($_SESSION['username'])) ? $_SESSION['username'] : ''; ?>
+        var myvar = '<?php echo $session_value; ?>';
+        if (myvar === '') {
+            showErrors('Access Denied! Login first', 'alert alert-danger navbar-brand');
+            return false;
+        }
+
+    }
+</script>
