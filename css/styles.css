@@ -1,5 +1,5 @@
 #load-screen {
-  background-color: black;
+  background-color: white;
   /*background: url(../images/header-back.png);*/
   position: fixed;
   z-index: 10000;

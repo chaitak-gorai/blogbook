@@ -24,7 +24,8 @@
 
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar  " role="navigation" style="background-color: rgba(0,0,0,)!important;
+color:white;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -33,13 +34,14 @@
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex2-collapse" style="margin: 5px;">
 
                 <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
             </button>
             <a class="navbar-brand" href="index.php">Blogbook</a>
             <a class="navbar-brand" title="Already Register?" href='index.php#login'>Login</a>
             <a class="navbar-brand" title="Login First" href='admin/index.php'>Admin</a>
+
         </div>
 
         <div>
@@ -48,7 +50,7 @@
 
 
 
-            <div class="container collapse navbar-collapse navbar-ex2-collapse">
+            <div class="container collapse navbar-collapse navbar-ex2-collapse" style="float: right; height: 1px;">
 
 
                 <a class="navbar-brand" title="New User?" href='registration.php'>Register</a>
