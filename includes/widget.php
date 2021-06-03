@@ -12,7 +12,7 @@
         $post_author = $row['post_author'];
         $post_date = $row['post_date'];
         $post_image = $row['post_image'];
-        $post_content = substr($row['post_content'], 0, 100);
+        $post_content = strip_tags(substr($row['post_content'], 0, 100));
         $post_status = $row['post_status'];
         $post_category_id = $row['post_category_id'];
         $query = "SELECT * FROM categories WHERE cat_id={$post_category_id}";
