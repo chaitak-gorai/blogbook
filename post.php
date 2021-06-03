@@ -49,7 +49,7 @@
                                 <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a>
                             </h2> -->
 
-                            <h4 style=" font-size: x-large; font-weight: 600; font-stretch: extra-expanded; overflow-wrap:break-word;"><?php echo $post_title; ?> </h4>
+                            <h4 class="title" style=" font-size: x-large; font-weight: 600; font-stretch: extra-expanded; overflow-wrap:break-word;"><?php echo $post_title; ?> </h4>
 
                             <div style="text-align:right;
                                         float:right;">
@@ -83,7 +83,7 @@
                             <hr>
                             <img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
                             <hr>
-                            <p><?php echo $post_content; ?></p>
+                            <div class="content"><?php echo $post_content; ?></div>
                         </div>
 
                         <hr>

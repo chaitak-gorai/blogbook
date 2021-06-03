@@ -441,13 +441,6 @@ div {
   background: white;
   padding: 20px 15px;
   margin-top: 10px;
-  font-size: 12px;
-  font-family: helvetica, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  text-indent: 25px;
-  letter-spacing: 1px;
-  line-height: 1.5;
 }
 .list-items {
   background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -457,4 +450,42 @@ div {
   width: 70%;
   display: flex;
   justify-content: space-between;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.content {
+  font-size: 14pt;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-indent: 25px;
+  letter-spacing: 1px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+.title {
+  font-family: "Roboto", sans-serif;
+}
+
+nav.stroke a,
+nav.fill a {
+  position: relative;
+}
+nav.stroke a:after,
+nav.fill a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke a:hover:after {
+  width: 100%;
+}
+.navbar a:hover,
+a:focus {
+  color: white !important;
 }

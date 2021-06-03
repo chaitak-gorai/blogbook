@@ -33,6 +33,7 @@
         body {
             /* background: linear-gradient(to right, #525252 0%, #3d72b4 100%); */
             background: linear-gradient(to right, #360033 0%, #0b8793 100%);
+            /* background: linear-gradient(to right, #42275a 0%, #734b6d 100%); */
 
 
             font-size: 12px;

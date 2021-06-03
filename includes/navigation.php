@@ -24,7 +24,7 @@
 
 
 
-<nav class="navbar   " role="navigation" style="background-color: rgba(0,0,0,)!important;
+<nav class="navbar stroke   " role="navigation" style="background-color: rgba(0,0,0,)!important;
 color:white;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
