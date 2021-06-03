@@ -486,6 +486,6 @@ nav.stroke a:hover:after {
   width: 100%;
 }
 .navbar a:hover,
-a:focus {
+.navbar a:focus {
   color: white !important;
 }
