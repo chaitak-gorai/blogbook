@@ -32,7 +32,8 @@
                         $post_author = $row['post_author'];
                         $post_date = $row['post_date'];
                         $post_image = $row['post_image'];
-                        $post_content = $row['post_content'];
+                        // $post_content = $row['post_content'];
+                        $post_content = strip_tags($row['post_content'], "<p><a><li><img><h1><h2><h3><h4><h5><h6><b><br><hr><strong><code><table>");
                         $post_category_id = $row['post_category_id'];
                         $post_comment = $row['post_comment_count'];
                         $query = "SELECT * FROM categories WHERE cat_id={$post_category_id}";
