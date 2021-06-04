@@ -1,9 +1,9 @@
-<?php include "includes/ad_header.php"?>
+<?php include "includes/ad_header.php" ?>
 
 <div id="wrapper">
 
     <!-- Navigation -->
-    <?php include "includes/ad_navigation.php"?>
+    <?php include "includes/ad_navigation.php" ?>
 
     <div id="page-wrapper">
 
@@ -16,37 +16,31 @@
                         Welcome to Admin
                         <small>Author</small>
                     </h1>
-<?php
+                    <?php
 
-if(isset($_GET['source'])){
-    
-    $source=$_GET['source'];
-    
-    
-    
-}else{
-    $source='';
-}
-switch($source){
-        
-        case 'add_post';
-        include "includes/add_post.php";
-        break;
-        
-        case 'edit_post';
-        include "includes/edit_post.php";
-        break;
-        
-        case '340';
-        echo"NICE 340";
-        break;
-        
-    default:
-        include "includes/view_all_posts.php";
+                    if (isset($_GET['source'])) {
 
+                        $source = $_GET['source'];
+                    } else {
+                        $source = '';
+                    }
+                    switch ($source) {
 
+                        case 'add_post';
+                            include "includes/add_post.php";
+                            break;
 
-}
+                        case 'edit_post';
+                            include "includes/edit_post.php";
+                            break;
+
+                        case '340';
+                            echo "NICE 340";
+                            break;
+
+                        default:
+                            include "includes/view_all_posts.php";
+                    }
 
 
 
@@ -54,9 +48,9 @@ switch($source){
 
 
 
-    ?>
-                   
-                   
+                    ?>
+
+
                 </div>
             </div>
             <!-- /.row -->
@@ -76,7 +70,8 @@ switch($source){
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script2.js"></script>
-<script src="https://cdn.tiny.cloud/1/nkozq64khqyq7l925vbf3sk06cauwi9x56geophavrrprqj0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- <script src="https://cdn.tiny.cloud/1/nkozq64khqyq7l925vbf3sk06cauwi9x56geophavrrprqj0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
+<script src="https://cdn.tiny.cloud/1/2lk0dnyg6az318s1tno40pzlxvhfj43be8jhrxauhpjwkltw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script src="js/script.js"></script>
 </body>
 
