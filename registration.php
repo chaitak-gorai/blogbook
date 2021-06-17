@@ -46,6 +46,11 @@
                         <div class="head">
                             <form action="registration.php" role="form" method="post" id="regis-form" autocomplete="off" onsubmit=" validate_form()">
                                 <div class="app-form-group">
+
+                                    <label for="fullname" style="color: white;">Full Name</label>
+                                    <input type="text" name="fullname" id="fullname" class="app-form-control" placeholder="Enter Your Name ">
+                                </div>
+                                <div class="app-form-group">
                                     <input type="hidden" name="contact_number">
                                     <label for="name" style="color: white;">Username</label>
                                     <input type="text" name="username" id="username" class="app-form-control" placeholder="Unique username">
@@ -83,9 +88,10 @@
 </script>
 <script>
     function clearForm() {
-        const name = document.getElementById('username').value = "";
+        const user = document.getElementById('username').value = "";
         const email = document.getElementById('email').value = "";
         const pass = document.getElementById('key').value = "";
+        const name = document.getElementById('fullname').value = "";
 
     }
 
@@ -116,7 +122,8 @@
         const user = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const pass = document.getElementById('key').value;
-        if (user == "" || email == "" || pass == "") {
+        const name = document.getElementById('fullname').value;
+        if (user == "" || email == "" || pass == "" || name == "") {
             showError('Fields Cannot be Empty!', 'alert alert-danger');
         } else {
 
@@ -136,13 +143,15 @@
             var use = $('#username').val();
             var em = $('#email').val();
             var pas = $('#key').val();
+            var nam = $('#fullname').val();
             $.ajax({
                 type: 'POST',
                 url: 'register_script.php',
                 data: {
                     username: use,
                     email: em,
-                    password: pas
+                    password: pas,
+                    fullname: nam
                 },
                 success: showError('Registered Successfully! We will contact you soon', 'alert alert-success')
 
