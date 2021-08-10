@@ -23,7 +23,7 @@ $query="SELECT * FROM posts WHERE post_id={$edit_post_id}";
 
 if(isset($_POST['update_post'])){
     
-                                 $post_author=$_POST['post_author'];
+                                //  $post_author=$_POST['post_author'];
                                  $post_title=$_POST['post_title'];
                                  $post_category_id=$_POST['post_category'];
                                  $post_status=$_POST['post_status'];
@@ -102,7 +102,7 @@ echo "<p class='bg-success'>Post Updated..<a href='../post.php?p_id={$post_id}'>
 
     <div class="form-group">
         <label for="title">Post Author</label>
-        <input value="<?php echo $post_author?>" type="text" class="form-control" name="post_author">
+        <input value="<?php echo $post_author?>" type="text" class="form-control" name="post_author" disabled>
     </div>
 
 <div class="form-group">

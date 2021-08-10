@@ -3,7 +3,7 @@
 if (isset($_POST['create_post'])) {
 
     $post_content = mysqli_real_escape_string($connection, $_POST['post_content']);
-    $post_author = $_POST['post_author'];
+    $post_author = $_SESSION['username'];
     $post_title = $_POST['post_title'];
     $post_category_id = $_POST['post_category'];
     $post_image = $_FILES['image']['name'];
@@ -65,7 +65,7 @@ if (isset($_POST['create_post'])) {
 
     <div class="form-group">
         <label for="title">Post Author</label>
-        <input type="text" class="form-control" name="post_author">
+        <input type="text" class="form-control" name="post_author" value="<?php echo $_SESSION['username']; ?>" disabled >
     </div>
 
 
