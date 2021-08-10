@@ -35,7 +35,7 @@ if(isset($_POST['update_user'])){
              
              $user_firstname=$_POST['user_firstname'];
              $user_lastname=$_POST['user_lastname'];
-             $user_role=$_POST['user_role'];
+            //  $user_role=$_POST['user_role'];
 //             $post_image=$_FILES['image']['name'];
 //             $post_image_temp=$_FILES['image']['tmp_name'];
              $username=$_POST['username'];
@@ -110,7 +110,7 @@ confirm($edit_user_query2);
         <label for="post_status">Lastname</label>
         <input type="text" value="<?php echo $user_lastname; ?> " class="form-control" name="user_lastname">
     </div>
-<select name="user_role"  id="">
+<!-- <select name="user_role"  id="">
   
    <option value="subscriber"><?php echo $user_role ?></option>
    <?php 
@@ -127,7 +127,7 @@ confirm($edit_user_query2);
    
    
   
-</select>
+</select> -->
 
 
     <div class="form-group">
