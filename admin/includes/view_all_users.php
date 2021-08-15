@@ -38,7 +38,7 @@
                                 echo "<tr>
                             
                                  <td>{$user_id}</td>
-                                   <td>{$username}</td>
+                                   <td><a href='../user.php?u_id={$user_id}'>{$username}</a></td>
                                    <td>{$user_firstname}</td>";
                                    
                                    

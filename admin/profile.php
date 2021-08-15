@@ -5,7 +5,7 @@
 
 if(isset($_SESSION['username'])){
     
-$pusername=$_SESSION['username'];
+$pusername=$_SESSION['username'];}
     
     $query="SELECT * FROM users WHERE username='{$pusername}'";
     $user_profile_query=mysqli_query($connection, $query);
@@ -20,7 +20,7 @@ $pusername=$_SESSION['username'];
                                  $user_email=$row['user_email'];
                                  $user_image=$row['user_image'];
                                  $user_role=$row['user_role'];
-    
+                                 $user_info=$row['user_info'];
         
         
         
@@ -36,18 +36,28 @@ if(isset($_POST['update_user'])){
              $user_firstname=$_POST['user_firstname'];
              $user_lastname=$_POST['user_lastname'];
             //  $user_role=$_POST['user_role'];
-//             $post_image=$_FILES['image']['name'];
+            $user_image=$_FILES['user_image']['name'];
 //             $post_image_temp=$_FILES['image']['tmp_name'];
              $username=$_POST['username'];
              $user_email=$_POST['user_email'];
+             $user_info=$_POST['user_info'];
              $user_password=$_POST['user_password'];
+             $user_image_temp = $_FILES['user_image']['tmp_name'];
+             move_uploaded_file($user_image_temp, "../user_images/$user_image");
 //             $post_comment_count=4;
 //             $post_date=date('d-m-y');
 //             $post_status=$_POST['post_status'];
 
 //    move_uploaded_file($post_image_temp, "../images/$post_image");
  
-
+if(empty($user_image)){
+       
+    $query2="SELECT *FROM users WHERE username='$username' ";
+      $select_image3=mysqli_query($connection,$query2);
+      while($row2=mysqli_fetch_array($select_image3)){
+          $user_image=$row2['user_image'];
+      }
+  }
     
      if(!empty($username)&&!empty($user_password)){
         $user_password=base64_encode($user_password);
@@ -55,6 +65,8 @@ if(isset($_POST['update_user'])){
      $query.="user_firstname='{$user_firstname}', ";
      $query.="user_lastname='{$user_lastname}', ";
      $query.="user_role='{$user_role}', ";
+     $query.="user_image='{$user_image}', ";
+     $query.="user_info='{$user_info}', ";
      $query.="username='{$username}', ";
      $query.="user_email='{$user_email}', ";
      $query.="user_password='{$user_password}' ";
@@ -79,7 +91,7 @@ confirm($edit_user_query2);
 
 } else{$message="";
 }
-}
+
 ?>
 
 
@@ -108,6 +120,14 @@ confirm($edit_user_query2);
      <div class="form-group">
         <label for="post_status">Lastname</label>
         <input type="text" value="<?php echo $user_lastname; ?> " class="form-control" name="user_lastname">
+    </div>
+    <div class="form-group">
+        <label for="post_image">User Image</label>
+        <input type="file" name="user_image">
+    </div>
+    <div class="form-group">
+        <label for="title">Short Info</label>
+        <input type="text" value="<?php echo $user_info; ?> " class="form-control" name="user_info">
     </div>
 <!-- <select name="user_role"  id="">
   
