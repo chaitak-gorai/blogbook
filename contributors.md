@@ -10,3 +10,4 @@
 * [Raja Mehmood Ul Hassan](https://github.com/rmhassan)
  
 * [ Kat Kavaliova](https://github.com/katkava)
+*  [Shubham Kumar Singh](https://github.com/ShubhamKrSingh21)
