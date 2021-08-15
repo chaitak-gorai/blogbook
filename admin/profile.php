@@ -96,8 +96,7 @@ confirm($edit_user_query2);
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Welcome to Admin
-                        <small>Author</small>
+                        User Profile
                     </h1>
  <h6 class="text-center"><?php echo $message; ?></h6>
                     <form action="" method="post" enctype="multipart/form-data">
