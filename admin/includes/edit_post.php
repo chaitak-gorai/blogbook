@@ -82,6 +82,10 @@ echo "<p class='bg-success'>Post Updated..<a href='../post.php?p_id={$post_id}'>
     <div class="form-group">
         <select name="post_category" id="">
         <?php
+        
+        echo "<option value='$post_category_id'>default</option>";
+        ?>
+        <?php
             
               $query="SELECT * FROM categories" ;                   $select_categories=mysqli_query($connection,$query);  
                
