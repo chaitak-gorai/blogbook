@@ -103,7 +103,7 @@
            
 
    
-  $query = "SELECT * FROM posts WHERE author_id=$link_user_id2";
+  $query = "SELECT * FROM posts WHERE author_id=$link_user_id2 AND post_status='published'";
                     $select_all_posts_query = mysqli_query($connection, $query);
 
 
@@ -127,13 +127,13 @@
                   <div class="panel">
                       <div class="panel-body">
                           <div class="bio-chart">
-                              <div ><img class="img-responsive" src="images/lappy.jpg" alt=""  style="width: 100px; height: 100px; "></div>
+                              <div ><img class="img-responsive" src="images/<?php echo $post_image?>" alt=""  style="width: 100px; height: 100px; "></div>
                           </div>
                           <div class="bio-desk">
                               <!-- <h4 class="red">Envato Website</h4>
                               <p>Started : 15 July</p>
                               <p>Deadline : 15 August</p> -->
-                              <h4 class="title" style=" font-size: x-large; font-weight: 600; font-stretch: extra-expanded; overflow-wrap:break-word;"><?php echo $post_title; ?> </h4>
+                              <a href="post.php?p_id=<?php echo $post_id ?>"><h4 class="title" style=" font-size: x-large; font-weight: 600; font-stretch: extra-expanded; overflow-wrap:break-word;"><?php echo $post_title; ?> </h4></a>
 
 
 

@@ -30,6 +30,7 @@
                         $post_title = $row['post_title'];
                         $post_id = $row['post_id'];
                         $post_author = $row['post_author'];
+                        $post_author_id = $row['author_id'];
                         $post_date = $row['post_date'];
                         $post_image = $row['post_image'];
                         $post_content = $row['post_content'];
@@ -54,7 +55,7 @@
 
                             <div style="text-align:right;
                                         float:right;">
-                                <button type="button" class="btn btn-sml btn-dark"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></button>
+                               <button type="button" class="btn btn-sml btn-dark"> <a href="user.php?u_id=<?php echo $post_author_id ?>"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></a></button>
                             </div>
                             <!-- </h2> -->
                             <!-- <p class="lead">
@@ -67,17 +68,29 @@
   font-size:15px;
   width:fit-content;
   text-align:left;"><?php echo $post_date; ?></i>
+  <i class="glyphicon glyphicon-tags " style=" background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  padding: 0.4rem 1rem;
+  border-radius: 3rem;
+  font-size:15px;
+  width:fit-content;
+  text-align:left;"><?php echo $post_category; ?></i>
+  <i class="glyphicon glyphicon-comment " style=" background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  padding: 0.4rem 1rem;
+  border-radius: 3rem;
+  font-size:15px;
+  width:fit-content;
+  text-align:left;"><?php echo $post_comment; ?></i>
 
 
 
 
 
-                            <button type="button" class="btn btn-sml btn-primary"><i class="	glyphicon glyphicon-tags"> <?php echo $post_category; ?></i></button>
+                            <!-- <button type="button" class="btn btn-sml btn-primary"><i class="	glyphicon glyphicon-tags"> <?php echo $post_category; ?></i></button>
 
 
 
-                            <!-- <i class="fa fa-pencil-square-o"></i> <?php echo $post_author; ?> -->
-                            <button type="button" class="btn btn-sml btn-warning"><i class="	glyphicon glyphicon-comment"> <?php echo $post_comment; ?></i></button>
+                            <i class="fa fa-pencil-square-o"></i> <?php echo $post_author; ?> -->
+                            <!-- <button type="button" class="btn btn-sml btn-warning"><i class="	glyphicon glyphicon-comment"> <?php echo $post_comment; ?></i></button> -->
 
                             </p>
 

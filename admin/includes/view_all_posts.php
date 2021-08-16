@@ -133,6 +133,7 @@ if(isset($_POST['checkboxarray'])){
                                global $cat_id;
                                  $post_id=$row['post_id'];
                                  $post_author=$row['post_author'];
+                                 $post_author_id=$row['author_id'];
                                  $post_title=$row['post_title'];
                                  $post_category_id=$row['post_category_id'];
                                  $post_image=$row['post_image'];
@@ -147,7 +148,7 @@ if(isset($_POST['checkboxarray'])){
                                 echo "<tr>
                             <td><input class='selectbox'' type='checkbox' name='checkboxarray[]' value='{$post_id}'></th>
                                  <td>{$post_id}</td>
-                                   <td>{$post_author}</td>
+                                   <td><a href='../user.php?u_id={$post_author_id}'>{$post_author}</a></td>
                                    <td>{$post_title}</td>";
                                    
                                    

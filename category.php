@@ -34,6 +34,7 @@
                     $post_title = $row['post_title'];
                     $post_id = $row['post_id'];
                     $post_author = $row['post_author'];
+                    $post_author_id = $row['author_id'];
                     $post_date = $row['post_date'];
                     $post_image = $row['post_image'];
                     $post_content = strip_tags(substr($row['post_content'], 0, 1000));
@@ -95,7 +96,7 @@
                                         <h5 style=" font-size: x-large; font-weight: 600; font-stretch: extra-expanded; overflow-wrap:break-word; "><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?> </a>
                                             <div style="text-align:right;
                                         float:right;">
-                                                <button type="button" class="btn btn-sml btn-dark"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></button>
+                                               <button type="button" class="btn btn-sml btn-dark"> <a href="user.php?u_id=<?php echo $post_author_id ?>"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></a></button>
                                             </div>
                                         </h5>
 
