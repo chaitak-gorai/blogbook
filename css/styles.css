@@ -385,8 +385,8 @@ a {
   }
 
   .card-grid-space .num {
-    /margin-left: 0;
-    /text-align: center;
+    margin-left: 0;
+    text-align: center;
   }
 }
 
@@ -877,4 +877,50 @@ ul.summary-list > li:last-child {
 
 .activity-desk .album a:last-child {
   margin-right: 0px;
+}
+
+/* preloader */
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1500;
+  background-color: #eff0f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preloader.fade-out {
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.preloader .box {
+  width: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.preloader .box div {
+  height: 15px;
+  width: 15px;
+  background-color: #2eb1ed;
+  border-radius: 50%;
+  animation: loader 1s ease infinite;
+}
+.preloader .box div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.preloader .box div:nth-child(3) {
+  animation-delay: 0.1s;
+}
+@keyframes loader {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
 }

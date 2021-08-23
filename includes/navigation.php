@@ -147,8 +147,25 @@ color:white;">
     </div>
     <!--         /.container -->
 </nav>
+<div class="preloader">
+  <div class="box">
+  <div></div>  
+  <div></div>  
+  <div></div>  
+  </div>
 
-
+</div>
+<script>
+     function preloader() {
+  window.addEventListener("load", () => {
+    document.querySelector(".preloader").classList.add("fade-out");
+    setTimeout(() => {
+      document.querySelector(".preloader").style.display = "none";
+    }, 600);
+  });
+}
+preloader();
+ </script>
 
 <script>
     function showErrors(error, alrt) {

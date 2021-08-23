@@ -1,5 +1,6 @@
  <!-- Footer -->
  <style>
+
      .credits {
 
          display: flex;
