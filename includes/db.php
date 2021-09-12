@@ -8,10 +8,15 @@
 
 //Remote SQL database
 //Comment it while running in local Environment
-$db['db_host']="remotemysql.com";
-$db['db_user']="DFc7onUv5f";
-$db['db_pass']="7GfIqBKfQm";
-$db['db_name']="DFc7onUv5f";
+// $db['db_host']="remotemysql.com";
+// $db['db_user']="DFc7onUv5f";
+// $db['db_pass']="7GfIqBKfQm";
+// $db['db_name']="DFc7onUv5f";
+
+$db['db_host']="sql212.epizy.com";
+$db['db_user']="epiz_27346577";
+$db['db_pass']="ay6kE4vrAx31";
+$db['db_name']="epiz_27346577_cms";
 
 foreach ($db as $key => $value) {
 
