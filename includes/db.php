@@ -13,10 +13,10 @@
 // $db['db_pass']="7GfIqBKfQm";
 // $db['db_name']="DFc7onUv5f";
 
-$db['db_host']="sql212.epizy.com";
-$db['db_user']="epiz_27346577";
-$db['db_pass']="ay6kE4vrAx31";
-$db['db_name']="epiz_27346577_cms";
+$db['db_host']="sql6.freemysqlhosting.net";
+$db['db_user']="sql6434875";
+$db['db_pass']="fxHpYP19QZ";
+$db['db_name']="sql6434875";
 
 foreach ($db as $key => $value) {
 
