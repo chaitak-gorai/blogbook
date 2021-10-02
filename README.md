@@ -13,7 +13,7 @@ Why not start your open source journey by merging some codes here. It will be ve
 
  ### Ways to Contribute
   * Find a bug by running the project locally
-  * Solve the [issues](github.com/chaitak-gorai/blogbook/issues) which are already set up
+  * Solve the [issues](https://github.com/chaitak-gorai/blogbook/issues) which are already set up
   * Sugget some change or create your own isssue
   *  Create documentation like site structure, how to write a blog,etc
   *  Indent/Beautify/Modify codes.
