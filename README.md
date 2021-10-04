@@ -1,11 +1,16 @@
-# Blogbook ® 
+<p align="center">
+    <a href="https://blogbook-blog.herokuapp.com/">
+        <img src="https://raw.githubusercontent.com/chaitak-gorai/blogbook/main/images/logowide.svg" width="30%"> 
+    </a>
+</p> 
 Blogbook- Content Management System Project
 
 Hello,
-Welcome to Blogbook
+Welcome to Blogbook®
 This is a CONTENT MANAGEMENT SYSTEM project using PHP.
 You can register as a blogger, login to the admin, create post,publish it, view comments etc.
 This is totally dynamic. All data are fetched on realtime using MySQL queries.
+
 
 
 
