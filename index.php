@@ -183,7 +183,7 @@
                 <ul class="pager">
                     <?php
                     for ($i = 1; $i <= $count; $i++) {
-                        if ($i == $page) {
+                        if ($i == $page || $page == '' && $i == 1) {
                             echo "<li><a href='index.php?page={$i}' class='active'>{$i}</a></li>";
                         } else {
                             echo "<li><a href='index.php?page={$i}'>{$i}</a></li>";
