@@ -18,7 +18,11 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8 ">
-                <h1 class="text-center" style="color:white;">Welcome to Blogbook</h1>
+                <h1 class="text-center" style="color:white;">Welcome to <img id="logo123" src="../images/logo.png" alt="gg"  
+               style="  height: 80px;
+        width: 200px;
+        
+   "> </h1>
                 <?php
                 $results_per_page = 5;
                 if (isset($_GET['page'])) {

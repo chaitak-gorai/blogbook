@@ -38,8 +38,15 @@ color:white;">
                 <span class="icon-bar" style="background-color: white;"></span>
                 <span class="icon-bar" style="background-color: white;"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Blogbook</a>
-            <a class="navbar-brand " title="Already Register?" href='index.php#login'>Login</a>
+           <a class="navbar-brand" href="index.php" style="padding:10px 10px;">   
+               <img id="logo123" src="../images/logo.png" alt="gg"  
+               style="  height: 40px;
+        width: 100px;
+        
+   ">
+            </a> 
+         
+            <a class="navbar-brand" title="Already Register?" href='index.php#login'>Login</a>
             <a class="navbar-brand  " title="Login First" href='admin/index.php' onclick="return admin()">Admin</a>
             <div class="heads"></div>
 
