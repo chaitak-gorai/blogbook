@@ -65,7 +65,8 @@ Why not start your open source journey by merging some codes here. It will be ve
    Jump to [Contributors.md](https://github.com/chaitak-gorai/blogbook/blob/main/contributors.md)
    
 ### Live project link
-https://blogbook.tech
+Heroku - https://blogbook-blog.herokuapp.com/ (Update With Recent Changes)
+Website - https://blogbook.tech (Updated in a Week)
 
 Since this project is still in development stage so you might find bugs and also the blog posts are dummy.
 
