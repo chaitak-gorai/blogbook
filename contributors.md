@@ -11,3 +11,4 @@
 * [Kat Kavaliova](https://github.com/katkava)
 * [Shubham Kumar Singh](https://github.com/ShubhamKrSingh21)
 * [Dejan Popovic](https://github.com/pdejan)
+* [Venkateshwaran A](https://github.com/aviwar)
