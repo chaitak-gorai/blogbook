@@ -1,7 +1,6 @@
 <?php include "includes/db.php"; ?>
 <?php include "includes/header.php"; ?>
 
-
 <body>
 
     <!-- Navigation -->
@@ -96,19 +95,13 @@
                                         <h5 style=" font-size: x-large; font-weight: 600; font-stretch: extra-expanded; overflow-wrap:break-word; "><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?> </a>
                                             <div style="text-align:right;
                                         float:right;">
-                                               <button type="button" class="btn btn-sml btn-dark"> <a href="user.php?u_id=<?php echo $post_author_id ?>"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></a></button>
+                                                <button type="button" class="btn btn-sml btn-dark"> <a href="user.php?u_id=<?php echo $post_author_id ?>"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></a></button>
                                             </div>
                                         </h5>
 
 
                                         <p>
-
-
-
-
                                             <button type="button" class="btn btn-sml btn-primary"><i class="	glyphicon glyphicon-tags"> <?php echo $post_category; ?></i></button>
-
-
 
                                             <!-- <i class="fa fa-pencil-square-o"></i> <?php echo $post_author; ?> -->
                                             <button type="button" class="btn btn-sml btn-warning"><i class="	glyphicon glyphicon-comment"> <?php echo $post_comment; ?></i></button>
@@ -121,25 +114,8 @@
                                 </a>
                             </div>
                         </div>
-
-
-
                 <?php  }
                 } ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
@@ -149,9 +125,4 @@
 
         <hr>
 
-        <?php
-
-        include "includes/footer.php";
-
-
-        ?>
+        <?php include "includes/footer.php"; ?>

@@ -1,15 +1,8 @@
 <div class="col-md-4">
-
-
-
-
-
     <!-- Blog Search Well -->
     <div class="well">
         <h4>Blog Search</h4>
         <form action="search.php" method="post">
-
-
             <div class="input-group">
                 <input name="search" type="text" class="form-control">
                 <span class="input-group-btn">
@@ -22,13 +15,10 @@
         <!-- /.input-group -->
     </div>
 
-
     <div class="well logs" id="login">
         <div class="heads">
             <h4>Login</h4>
             <form action="includes/login.php" method="post" id="login_form" onsubmit="return validate_form()">
-
-
                 <div class="form-group">
                     <input name="username" type="text" class="form-control" placeholder="Enter Username" id="user_name">
 
@@ -40,9 +30,7 @@
                         <button class="btn btn-primary" name="login" type="submit">
                             Login
                         </button>
-
                     </span>
-
                 </div>
             </form>
             <h4 style="text-align: center;">OR</h4>
@@ -54,7 +42,6 @@
             <!-- /.input-group -->
         </div>
     </div>
-
 
     <!-- Blog Categories Well -->
     <?php
@@ -70,8 +57,6 @@
             <div class="col-lg-12">
                 <ul class="list-unstyled">
                     <?php
-
-
 
                     while ($row = mysqli_fetch_assoc($select_categories_sidebar)) {
                         $cat_title = $row['cat_title'];
@@ -107,7 +92,6 @@
         const card = document.querySelector('.logs');
         const head = document.querySelector('.heads');
 
-
         const errordiv = document.createElement('div');
 
         errordiv.className = alrt;
@@ -115,7 +99,6 @@
         card.insertBefore(errordiv, head);
 
         setTimeout(clearError, 3000);
-
     }
 
     function clearError() {
@@ -129,8 +112,6 @@
         const user = document.getElementById('user_name').value;
 
         const pass = document.getElementById('user_pass').value;
-
-
 
         // generate a five digit number for the contact_number variable
         if (user == "" || pass == "") {

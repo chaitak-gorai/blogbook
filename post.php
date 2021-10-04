@@ -55,7 +55,7 @@
 
                             <div style="text-align:right;
                                         float:right;">
-                               <button type="button" class="btn btn-sml btn-dark"> <a href="user.php?u_id=<?php echo $post_author_id ?>"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></a></button>
+                                <button type="button" class="btn btn-sml btn-dark"> <a href="user.php?u_id=<?php echo $post_author_id ?>"><i class="		glyphicon glyphicon-edit"> <?php echo $post_author; ?></i></a></button>
                             </div>
                             <!-- </h2> -->
                             <!-- <p class="lead">
@@ -68,27 +68,21 @@
   font-size:15px;
   width:fit-content;
   text-align:left;"><?php echo $post_date; ?></i>
-  <i class="glyphicon glyphicon-tags " style=" background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+                            <i class="glyphicon glyphicon-tags " style=" background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   padding: 0.4rem 1rem;
   border-radius: 3rem;
   font-size:15px;
   width:fit-content;
   text-align:left;"><?php echo $post_category; ?></i>
-  <i class="glyphicon glyphicon-comment " style=" background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+                            <i class="glyphicon glyphicon-comment " style=" background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   padding: 0.4rem 1rem;
   border-radius: 3rem;
   font-size:15px;
   width:fit-content;
   text-align:left;"><?php echo $post_comment; ?></i>
 
-
-
-
-
                             <!-- <button type="button" class="btn btn-sml btn-primary"><i class="	glyphicon glyphicon-tags"> <?php echo $post_category; ?></i></button>
-
-
-
+                            
                             <i class="fa fa-pencil-square-o"></i> <?php echo $post_author; ?> -->
                             <!-- <button type="button" class="btn btn-sml btn-warning"><i class="	glyphicon glyphicon-comment"> <?php echo $post_comment; ?></i></button> -->
 
@@ -118,9 +112,6 @@
                             ?>
 
                                 <div class="media " style="padding-left: 10px;">
-
-
-
                                     <div class="media-body " style="border-radius: 0;">
                                         <h4 class="media-heading"><?php echo $comment_author; ?>
                                             <small><?php echo $comment_date; ?></small>
@@ -128,9 +119,6 @@
                                         <?php echo $comment_content; ?>
                                     </div>
                                 </div>
-
-
-
                             <?php } ?>
 
                         </div>
@@ -138,13 +126,7 @@
                 } else {
                     header("Location:index.php");
                 }
-
-
                 ?>
-
-
-
-
 
                 <?php
                 if (isset($_POST['create_comment'])) {
@@ -153,8 +135,6 @@
                     $comment_author =  $_POST['comment_author'];
                     $comment_email =  $_POST['comment_email'];
                     $comment_content =  $_POST['comment_content'];
-
-
 
                     if (!empty($comment_author) && !empty($comment_email) && !empty($comment_content)) {
 
@@ -173,13 +153,8 @@
                         echo "<script>alert('Fileds Cannot Be empty')</script>";
                     }
                 }
-
-
-
-
-
-
                 ?>
+
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
@@ -205,31 +180,7 @@
                 <hr>
 
                 <!-- Posted Comments -->
-
-
-
-
                 <!-- Comment -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
@@ -239,9 +190,4 @@
 
         <hr>
 
-        <?php
-
-        include "includes/footer.php";
-
-
-        ?>
+        <?php include "includes/footer.php"; ?>

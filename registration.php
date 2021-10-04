@@ -1,28 +1,18 @@
 <?php include "includes/db.php"; ?>
 <?php include "includes/header.php"; ?>
 
-
-
-
-
 <link href="css/form_style.css" rel="stylesheet">
-
 
 <!-- Navigation -->
 
 <?php include "includes/navigation.php"; ?>
 
-
 <!-- Page Content -->
-
-
-
 <div class="background">
     <div class="container1">
         <div class="screen">
             <div class="screen-header">
                 <div class="screen-header-left">
-
                     <div class="screen-header-button maximize"></div>
                     <div class="screen-header-button minimize"></div>
                     <div class="screen-header-button close1"></div>
@@ -73,12 +63,12 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
 <hr>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js'></script>
 <script type='text/javascript'>
     (function() {
@@ -99,10 +89,7 @@
 
         const card = document.querySelector('.app-form');
         const head = document.querySelector('.head');
-
-
         const errordiv = document.createElement('div');
-
         errordiv.className = alrt;
         errordiv.appendChild(document.createTextNode(error));
         card.insertBefore(errordiv, head);
@@ -126,12 +113,7 @@
         if (user == "" || email == "" || pass == "" || name == "") {
             showError('Fields Cannot be Empty!', 'alert alert-danger');
         } else {
-
-
-
-            console.log('prev');
             const fo = document.getElementById('regis-form');
-            console.log('123');
 
             fo.contact_number.value = Math.random() * 100000 | 0;
             emailjs.sendForm('service_jqqodmg', 'template_khp9f0v', fo)
@@ -140,6 +122,7 @@
                 }, function(error) {
                     console.log('FAILED...', error);
                 });
+
             var use = $('#username').val();
             var em = $('#email').val();
             var pas = $('#key').val();
@@ -154,17 +137,10 @@
                     fullname: nam
                 },
                 success: showError('Registered Successfully! We will contact you soon', 'alert alert-success')
-
-
             });
             clearForm();
         };
-
-
-
-
     }
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <?php include "includes/footer.php"; ?>

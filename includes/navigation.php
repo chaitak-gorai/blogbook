@@ -1,59 +1,23 @@
-<!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex2-collapse">
-
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">Start Bootstrap</a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex2-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav> -->
-
-
-
-
-
 <nav class="navbar stroke   " role="navigation" style="background-color: rgba(0,0,0,)!important;
 color:white;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-
-
         <div class="navbar-header xyz">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex2-collapse" style="margin: 5px;">
-
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar" style="background-color: white;"></span>
                 <span class="icon-bar" style="background-color: white;"></span>
                 <span class="icon-bar" style="background-color: white;"></span>
             </button>
+
             <a class="navbar-brand" href="index.php">Blogbook</a>
             <a class="navbar-brand " title="Already Register?" href='index.php#login'>Login</a>
             <a class="navbar-brand  " title="Login First" href='admin/index.php' onclick="return admin()">Admin</a>
             <div class="heads"></div>
-
         </div>
 
         <div>
-
-
-
-
-
             <div class="container collapse navbar-collapse navbar-ex2-collapse " style="float: right; height: 1px;">
-
-
                 <a class="navbar-brand " title="New User?" href='registration.php'>Register</a>
                 <a class="navbar-brand" title="New User?" href='contact.php'>Contact</a>
 
@@ -99,16 +63,9 @@ color:white;">
                         echo "<li><a href='#'>{$cat_title}</a></li>";
                     }
 
-
-
-
-
                     ?>    
                     <li><a href='admin/index.php'>Admin</a></li>
-                    <li><a href='registration.php'>Register</a></li>
-                 
-                    
-                    
+                    <li><a href='registration.php'>Register</a></li> 
                     
                     <?php
                     if (isset($_SESSION['username'])) {
@@ -132,10 +89,6 @@ color:white;">
                     }
 
                     ?>
-                    
-                    
-                    
-                  
                 
                 
                 
@@ -147,25 +100,25 @@ color:white;">
     </div>
     <!--         /.container -->
 </nav>
-<div class="preloader">
-  <div class="box">
-  <div></div>  
-  <div></div>  
-  <div></div>  
-  </div>
 
+<div class="preloader">
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </div>
 <script>
-     function preloader() {
-  window.addEventListener("load", () => {
-    document.querySelector(".preloader").classList.add("fade-out");
-    setTimeout(() => {
-      document.querySelector(".preloader").style.display = "none";
-    }, 600);
-  });
-}
-preloader();
- </script>
+    function preloader() {
+        window.addEventListener("load", () => {
+            document.querySelector(".preloader").classList.add("fade-out");
+            setTimeout(() => {
+                document.querySelector(".preloader").style.display = "none";
+            }, 600);
+        });
+    }
+    preloader();
+</script>
 
 <script>
     function showErrors(error, alrt) {

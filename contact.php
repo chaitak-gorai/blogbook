@@ -2,8 +2,6 @@
 <?php include "includes/header.php"; ?>
 
 <?php
-
-
 if (isset($_POST['submit'])) {
 
     $to = "captcha.c14@gmail.com";
@@ -14,11 +12,6 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
-
-
-
-
-
 
 <!-- Navigation -->
 
@@ -83,12 +76,10 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
-
 <hr>
+
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js'></script>
 <script type='text/javascript'>
     (function() {
@@ -105,19 +96,14 @@ if (isset($_POST['submit'])) {
     }
 
     function showError(error, alrt) {
-
         const card = document.querySelector('.app-form');
         const head = document.querySelector('.head');
-
-
         const errordiv = document.createElement('div');
 
         errordiv.className = alrt;
         errordiv.appendChild(document.createTextNode(error));
         card.insertBefore(errordiv, head);
-
         setTimeout(clearError, 3000);
-
     }
 
     function clearError() {
@@ -153,6 +139,5 @@ if (isset($_POST['submit'])) {
 
     });
 </script>
-
 
 <?php include "includes/footer.php"; ?>
