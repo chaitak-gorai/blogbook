@@ -30,7 +30,7 @@
 
             <div class="card-grid-space">
 
-                <a class="card" href="../post.php?p_id=<?php echo $post_id; ?>" style="--bg-img: url('../images/<?php echo $post_image; ?>');margin:1.5rem;">
+                <a class="card" href="../post.php?p_id=<?php echo $post_id; ?>" style="--bg-img: url('../images/<?php echo $post_image; ?>');margin:1.5rem;text-decoration:none;">
                     <div>
                         <h1><?php echo $post_title; ?></h1>
                         <p><?php echo $post_content; ?></p>

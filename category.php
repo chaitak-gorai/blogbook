@@ -114,7 +114,7 @@
                                             <button type="button" class="btn btn-sml btn-warning"><i class="	glyphicon glyphicon-comment"> <?php echo $post_comment; ?></i></button>
 
                                         </p>
-                                        <p><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_content; ?></a></p>
+                                        <p><a class="post-summary" href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_content; ?></a></p>
                                         <a href="post.php?p_id=<?php echo $post_id; ?>" class="btn1 btn--with-icon"><i class="btn-icon glyphicon glyphicon-arrow-right"></i>READ MORE</a>
                                     </div>
                                 </article>

@@ -161,7 +161,9 @@ a.icon-link:hover {
   color: #ffb535;
   text-decoration: none;
 }
-
+.post-summary {
+  text-decoration: none;
+}
 .btn1 {
   background: white;
   color: #363738;
