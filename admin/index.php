@@ -1,4 +1,4 @@
-<?php include "includes/ad_header.php" ?>
+<?php include "includes/ad_header.php"; ?>
 
 <div id="wrapper">
     <!-- Navigation -->
