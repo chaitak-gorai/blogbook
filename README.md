@@ -47,6 +47,7 @@ This is totally dynamic. All data are fetched on realtime using MySQL queries.
 ---
 
 # Contribute
+   ### Do Read - [Code of Conduct](https://github.com/chaitak-gorai/blogbook/blob/main/CODE_OF_CONDUCT.md)
    ### Jump to - [Contribute.md](https://github.com/chaitak-gorai/blogbook/blob/main/CONTRIBUTE.md)
 Why not start your open source journey by merging some codes here. It will be very great if you review the code and  find some bugs and issues.
 
