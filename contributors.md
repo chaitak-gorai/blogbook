@@ -12,3 +12,4 @@
 * [Shubham Kumar Singh](https://github.com/ShubhamKrSingh21)
 * [Dejan Popovic](https://github.com/pdejan)
 * [Venkateshwaran A](https://github.com/aviwar)
+* [Adam Strela](https://github.com/myli14)
