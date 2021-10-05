@@ -1,28 +1,19 @@
-<?php include "includes/db.php"; ?>
-<?php include "includes/header.php"; ?>
-
-
-
-
+<?php
+include "includes/db.php";
+include "includes/header.php";
+?>
 
 <link href="css/form_style.css" rel="stylesheet">
 
-
 <!-- Navigation -->
-
 <?php include "includes/navigation.php"; ?>
 
-
 <!-- Page Content -->
-
-
-
 <div class="background">
     <div class="container1">
         <div class="screen">
             <div class="screen-header">
                 <div class="screen-header-left">
-
                     <div class="screen-header-button maximize"></div>
                     <div class="screen-header-button minimize"></div>
                     <div class="screen-header-button close1"></div>
@@ -44,9 +35,8 @@
                 <div class="screen-body-item">
                     <div class="app-form">
                         <div class="head">
-                            <form action="registration.php" role="form" method="post" id="regis-form" autocomplete="off" onsubmit=" validate_form()">
+                            <form role="form" method="post" id="regis-form" autocomplete="off" onsubmit="validate_form()">
                                 <div class="app-form-group">
-
                                     <label for="fullname" style="color: white;">Full Name</label>
                                     <input type="text" name="fullname" id="fullname" class="app-form-control" placeholder="Enter Your Name ">
                                 </div>
@@ -73,98 +63,99 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
 <hr>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js'></script>
 <script type='text/javascript'>
+    // Initiate Email JS
     (function() {
-        // https://dashboard.emailjs.com/admin/integration
         emailjs.init('user_ctUkVZSQhl8tJdwn5OV7N');
     })();
-</script>
-<script>
-    function clearForm() {
-        const user = document.getElementById('username').value = "";
-        const email = document.getElementById('email').value = "";
-        const pass = document.getElementById('key').value = "";
-        const name = document.getElementById('fullname').value = "";
 
+    // Reset the form
+    function clearForm() {
+        document.getElementById('username').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('key').value = "";
+        document.getElementById('fullname').value = "";
     }
 
-    function showError(error, alrt) {
-
+    // display alert message
+    function showAlert(alertMsg, alertType) {
         const card = document.querySelector('.app-form');
         const head = document.querySelector('.head');
 
-
         const errordiv = document.createElement('div');
 
-        errordiv.className = alrt;
-        errordiv.appendChild(document.createTextNode(error));
+        errordiv.className = alertType;
+        errordiv.appendChild(document.createTextNode(alertMsg));
         card.insertBefore(errordiv, head);
 
-        setTimeout(clearError, 3000);
-
+        setTimeout(clearAlert, 3000);
     }
 
-    function clearError() {
+    function clearAlert() {
         document.querySelector('.alert').remove();
     }
-</script>
 
-<script type='text/javascript'>
     function validate_form() {
         event.preventDefault();
+
+        // get form values
         const user = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const pass = document.getElementById('key').value;
         const name = document.getElementById('fullname').value;
+
+        // check form values are empty or not
         if (user == "" || email == "" || pass == "" || name == "") {
-            showError('Fields Cannot be Empty!', 'alert alert-danger');
+            showAlert('Fields Cannot be Empty!', 'alert alert-danger');
         } else {
-
-
-
-            console.log('prev');
-            const fo = document.getElementById('regis-form');
-            console.log('123');
-
-            fo.contact_number.value = Math.random() * 100000 | 0;
-            emailjs.sendForm('service_jqqodmg', 'template_khp9f0v', fo)
-                .then(function() {
-                    console.log('SUCCESS!');
-                }, function(error) {
-                    console.log('FAILED...', error);
-                });
-            var use = $('#username').val();
-            var em = $('#email').val();
-            var pas = $('#key').val();
-            var nam = $('#fullname').val();
             $.ajax({
                 type: 'POST',
                 url: 'register_script.php',
                 data: {
-                    username: use,
-                    email: em,
-                    password: pas,
-                    fullname: nam
+                    username: user,
+                    email: email,
+                    password: pass,
+                    fullname: name
                 },
-                success: showError('Registered Successfully! We will contact you soon', 'alert alert-success')
+                success: function(response) {
+                    // parse the response message
+                    let parsedResponse = JSON.parse(response);
+                    let status = parsedResponse.status;
+                    let message = parsedResponse.msg;
 
+                    if (status == 'success') {
+                        showAlert(message, 'alert alert-success');
 
+                        // clear the form after succesful registration
+                        clearForm();
+                        sendEmail();
+                    } else {
+                        showAlert(message, 'alert alert-danger');
+                    }
+                }
             });
-            clearForm();
         };
+    }
 
+    // send email with formData
+    function sendEmail() {
+        const form = document.getElementById('regis-form');
 
-
-
+        form.contact_number.value = Math.random() * 100000 | 0;
+        emailjs.sendForm('service_jqqodmg', 'template_khp9f0v', form)
+            .then(function() {
+                console.log('SUCCESS!');
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
     }
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <?php include "includes/footer.php"; ?>
