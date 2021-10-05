@@ -1,22 +1,14 @@
-<?php include "includes/db.php"; ?>
-<?php include "includes/header.php"; ?>
-
-
-
-
+<?php
+include "includes/db.php";
+include "includes/header.php";
+?>
 
 <link href="css/form_style.css" rel="stylesheet">
 
-
 <!-- Navigation -->
-
 <?php include "includes/navigation.php"; ?>
 
-
 <!-- Page Content -->
-
-
-
 <div class="background">
     <div class="container1">
         <div class="screen">
@@ -73,7 +65,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -96,10 +87,8 @@
     }
 
     function showError(error, alrt) {
-
         const card = document.querySelector('.app-form');
         const head = document.querySelector('.head');
-
 
         const errordiv = document.createElement('div');
 
@@ -108,7 +97,6 @@
         card.insertBefore(errordiv, head);
 
         setTimeout(clearError, 3000);
-
     }
 
     function clearError() {
@@ -126,12 +114,7 @@
         if (user == "" || email == "" || pass == "" || name == "") {
             showError('Fields Cannot be Empty!', 'alert alert-danger');
         } else {
-
-
-
-            console.log('prev');
             const fo = document.getElementById('regis-form');
-            console.log('123');
 
             fo.contact_number.value = Math.random() * 100000 | 0;
             emailjs.sendForm('service_jqqodmg', 'template_khp9f0v', fo)
@@ -144,6 +127,7 @@
             var em = $('#email').val();
             var pas = $('#key').val();
             var nam = $('#fullname').val();
+
             $.ajax({
                 type: 'POST',
                 url: 'register_script.php',
@@ -153,16 +137,21 @@
                     password: pas,
                     fullname: nam
                 },
-                success: showError('Registered Successfully! We will contact you soon', 'alert alert-success')
+                success: function(response) {
+                    let parsedResponse = JSON.parse(response);
 
+                    let status = parsedResponse.status;
+                    let message = parsedResponse.msg;
 
+                    if (status == 'success') {
+                        showError(message, 'alert alert-success');
+                    } else {
+                        showError(message, 'alert alert-danger');
+                    }
+                }
             });
             clearForm();
         };
-
-
-
-
     }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
