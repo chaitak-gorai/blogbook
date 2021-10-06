@@ -959,3 +959,14 @@ ul.summary-list > li:last-child {
 html {
   scroll-behavior: smooth;
 }
+
+.comment-form-error {
+  display: none;
+  padding: 10px;
+  margin: 5px;
+  background-color: rgba(205, 92, 92, 0.247);
+  color:#f91a1afd;
+  width: 200px;
+  text-align: center;
+  border-radius: 50% 20% / 10% 40%;
+}
