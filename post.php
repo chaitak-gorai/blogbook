@@ -39,6 +39,7 @@
                         // $post_content = strip_tags($row['post_content'], "");
                         $post_category_id = $row['post_category_id'];
                         $post_comment = $row['post_comment_count'];
+                        $post_views_count = $row['post_views_count'];
                         $query = "SELECT * FROM categories WHERE cat_id={$post_category_id}";
                         $select_categories_id = mysqli_query($connection, $query);
                         $cat = mysqli_fetch_assoc($select_categories_id);
@@ -82,6 +83,12 @@
   font-size:15px;
   width:fit-content;
   text-align:left;"><?php echo $post_comment; ?></i>
+                            <i class="glyphicon glyphicon-eye-open" style=" background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  padding: 0.4rem 1rem;
+  border-radius: 3rem;
+  font-size:15px;
+  width:fit-content;
+  text-align:left;"><?php echo $post_views_count; ?></i>
 
 
 
