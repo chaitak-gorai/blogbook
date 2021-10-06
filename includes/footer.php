@@ -16,7 +16,7 @@
 
      <div class="col-lg-12 credits ">
          Blogbook &copy 2021
-
+     <a href="https://github.com/chaitak-gorai/blogbook">Github</a>
      </div>
 
  </footer>
