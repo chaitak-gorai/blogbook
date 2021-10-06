@@ -77,7 +77,18 @@
                       <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comments</a>
                   </li>
                   <li>
-                      <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profiles</a>
+                      <a href="javascript:;" data-toggle="collapse" data-target="#profile-dropdown">
+                          <i class="fa fa-fw fa-dashboard"></i>Profiles
+                          <i class="fa fa-fw fa-caret-down"></i>
+                      </a>
+                      <ul id="profile-dropdown" class="collapse">
+                          <li>
+                              <a href="profile.php">Update profile</a>
+                          </li>
+                          <li>
+                              <a href="/user.php?u_id=<?php echo $_SESSION['user_id']; ?>">View profile</a>
+                          </li>
+                      </ul>
                   </li>
               </ul>
           </div>
@@ -89,9 +100,9 @@
 
       <div class="preloader">
   <div class="box">
-  <div></div>  
-  <div></div>  
-  <div></div>  
+  <div></div>
+  <div></div>
+  <div></div>
   </div>
 
 </div>
