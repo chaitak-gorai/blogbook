@@ -1,5 +1,10 @@
-<?php include "includes/db.php"; ?>
-<?php include "includes/header.php"; ?>
+<?php
+
+session_start();
+
+include "includes/db.php";
+include "includes/header.php";
+?>
 
 <?php
 
