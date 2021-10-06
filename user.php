@@ -68,7 +68,11 @@
       </div>
   </div>
   <div class="profile-info col-md-9">
-
+      <div class="pull-right" style="margin-top: 1px; margin-right: 1px;">
+          <button type="button" class="btn btn-primary btn-sm" onclick="history.back()">
+              <i class="glyphicon glyphicon-chevron-left"></i> Go back
+          </button>
+      </div>
       <div class="panel">
           <div class="bio-graph-heading">
              <?php echo $user_info;?>
@@ -94,11 +98,6 @@
 
               </div>
           </div>
-      </div>
-      <div class="pull-right">
-          <button type="button" class="btn btn-primary btn-xs" onclick="history.back()">
-              <i class="fa fa-arrow-left"></i> Go back
-          </button>
       </div>
       <div>
       <div class="row " id="uposts">
