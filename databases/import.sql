@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 26, 2021 at 03:49 PM
--- Server version: 10.4.14-MariaDB
+-- Host: localhost
+-- Generation Time: Oct 06, 2021 at 11:22 PM
+-- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -97,24 +97,24 @@ CREATE TABLE `posts` (
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `author_id`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
 (30, 2, 'Test1', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 1),
-(31, 2, 'Test2', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
-(32, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
+(31, 5, 'Test2', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
+(32, 6, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (33, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
-(34, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
+(34, 8, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (35, 2, 'Test6', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (36, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (37, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (38, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
-(39, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 1, 'published', 2),
+(39, 7, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 1, 'published', 2),
 (40, 2, 'Test11', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (41, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (42, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (43, 2, 'Test', 'captcha', 47, '2021-01-08', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs', 0, 'published', 0),
 (44, 2, 'Test', 'captcha', 47, '2021-01-09', 'typewriter.jpg', '<b>Test Post </b>  \r\n        ', 'xxxs', 0, 'published', 2),
-(45, 7, 'dsabsdjfb', 'captcha', 47, '2021-05-26', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs,html', 4, 'published', 9),
+(45, 2, 'dsabsdjfb', 'captcha', 47, '2021-05-26', 'typewriter.jpg', '<p>zSASaddwd</p>', 'xxxs,html', 4, 'published', 9),
 (46, 2, 'ttuytydf', 'dsfgsd', 47, '2021-05-26', '', '<p>dsdfsdf</p>', 'sdfsdf', 1, 'published', 2),
 (48, 2, 'sadfsdf', 'sdfsdf', 53, '2021-05-26', '', '<p>sdfsdfsdf</p>', 'sdfsdf', 1, 'published', 5),
-(49, 9, 'asasas', '', 47, '2021-05-26', '', '', 'simla,travel,vacations', 0, 'draft', 0);
+(49, 2, 'asasas', '', 47, '2021-05-26', '', '', 'simla,travel,vacations', 0, 'draft', 0);
 
 -- --------------------------------------------------------
 
@@ -195,7 +195,8 @@ ALTER TABLE `comments`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`post_id`);
+  ADD PRIMARY KEY (`post_id`),
+  ADD KEY `post_category_id` (`post_category_id`);
 
 --
 -- Indexes for table `users`
@@ -242,6 +243,16 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users_online`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`post_category_id`) REFERENCES `categories` (`cat_id`),
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
