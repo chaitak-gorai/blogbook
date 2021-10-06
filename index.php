@@ -20,10 +20,10 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8 ">
-                <h1 class="text-center" style="color:white;">Welcome to <img id="logo123" src="../images/logo.png" alt="gg"  
+                <h1 class="text-center" style="color:white;">Welcome to <img id="logo123" src="../images/logo.png" alt="gg"
                style="  height: 80px;
         width: 200px;
-        
+
    "> </h1>
                 <?php
                 $results_per_page = 5;
@@ -66,6 +66,7 @@
                     $post_status = $row['post_status'];
                     $post_category_id = $row['post_category_id'];
                     $post_comment = $row['post_comment_count'];
+                    $post_views_count = $row['post_views_count'];
                     $query = "SELECT * FROM categories WHERE cat_id={$post_category_id}";
                     $select_categories_id = mysqli_query($connection, $query);
                     $cat = mysqli_fetch_assoc($select_categories_id);
@@ -164,6 +165,7 @@
 
                                             <!-- <i class="fa fa-pencil-square-o"></i> <?php echo $post_author; ?> -->
                                             <button type="button" class="btn btn-sml btn-warning"><i class="	glyphicon glyphicon-comment"> <?php echo $post_comment; ?></i></button>
+                                            <button type="button" class="btn btn-sml btn-success"><i class="glyphicon glyphicon-eye-open"></i> <?php echo $post_views_count; ?></button>
 
                                         </p>
                                         <p><a href="post.php?p_id=<?php echo $post_id; ?>" style="text-decoration:none"><?php echo $post_content; ?></a></p>
