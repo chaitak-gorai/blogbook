@@ -7,7 +7,6 @@
                 <p>Please, try to search something else</p>
             </div>
         </article>
-        </a>
     </div>
 </div>
 <section class="detail-page">
