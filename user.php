@@ -14,14 +14,14 @@
         <div class="row ">
 
             <!-- Blog Entries Column -->
-         
+
 
                 <?php
-             
+
                 if (isset($_GET['u_id'])) {
                     $link_user_id = $_GET['u_id'];
 
-           
+
 
                     $query = "SELECT * FROM users WHERE user_id=$link_user_id";
                     $select_all_users_query = mysqli_query($connection, $query);
@@ -45,7 +45,7 @@
                     }
                 ?>
 
-                      
+
 
                         <div class="container bootstrap snippets bootdey">
 <div class="row">
@@ -68,10 +68,10 @@
       </div>
   </div>
   <div class="profile-info col-md-9">
-    
+
       <div class="panel">
           <div class="bio-graph-heading">
-             <?php echo $user_info;?> 
+             <?php echo $user_info;?>
           </div>
           <div class="panel-body bio-graph-info">
               <h1>Bio Graph</h1>
@@ -91,18 +91,23 @@
                   <div class="bio-row">
                       <p><span>Email </span>:<?php echo $user_mail ?></p>
                   </div>
-              
+
               </div>
           </div>
       </div>
+      <div class="pull-right">
+          <button type="button" class="btn btn-primary btn-xs" onclick="history.back()">
+              <i class="fa fa-arrow-left"></i> Go back
+          </button>
+      </div>
       <div>
       <div class="row " id="uposts">
-<?php 
+<?php
  $link_user_id2 = $_GET['u_id'];
 
-           
 
-   
+
+
   $query = "SELECT * FROM posts WHERE author_id=$link_user_id2 AND post_status='published'";
                     $select_all_posts_query = mysqli_query($connection, $query);
 
@@ -110,7 +115,7 @@
                     while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
                         $post_title = $row['post_title'];
                         $post_id = $row['post_id'];
-                     
+
                         $post_date = $row['post_date'];
                         $post_image = $row['post_image'];
                         $post_content = $row['post_content'];
@@ -122,7 +127,7 @@
                         $cat = mysqli_fetch_assoc($select_categories_id);
                         $post_category = $cat['cat_title'];?>
 
-          
+
               <div class="col-md-12">
                   <div class="panel">
                       <div class="panel-body">
@@ -165,8 +170,8 @@ text-align:left;"><?php echo $post_category; ?></i>
                       </div>
                   </div>
               </div>
-              
-     
+
+
 
 
 
@@ -222,7 +227,7 @@ text-align:left;"><?php echo $post_category; ?></i>
 
             </div>
 
-          
+
         </div>
         <!-- /.row -->
 
