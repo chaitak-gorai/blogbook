@@ -44,6 +44,8 @@
  <script src="js/script2.js"></script>
  <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 
+ <script src="js/checkComment.js"></script>
+
 
  </body>
 

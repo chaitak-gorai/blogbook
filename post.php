@@ -177,10 +177,7 @@
 
                         $query = "UPDATE posts SET post_comment_count= post_comment_count + 1 WHERE post_id=$link_post_id";
                         $update_comment_count = mysqli_query($connection, $query);
-                    } else {
-
-                        echo "<script>alert('Fileds Cannot Be empty')</script>";
-                    }
+                    } 
                 }
 
 
@@ -192,7 +189,7 @@
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form action="" method="post" role="form">
+                    <form action="" method="post" role="form" id="comment-form">
 
                         <div class="form-group">
                             <label for="author">Author</label>
@@ -207,7 +204,8 @@
                             <label for="content">Comment</label>
                             <textarea class="form-control" name="comment_content" rows="3"></textarea>
                         </div>
-                        <button type="submit" name="create_comment" class="btn btn-primary">Submit</button>
+                        <div class="comment-form-error"></div>
+                        <button type="submit" name="create_comment" value="1" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
 
