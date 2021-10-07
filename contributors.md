@@ -15,3 +15,4 @@
 * [Adam Strela](https://github.com/myli14)
 * [Shubham Jha](https://github.com/shubhamjha25)
 * [Kaique Garcia](https://github.com/kaiquegarcia)
+* [Hunter Bertoson](https://github.com/hkbertoson)
