@@ -24,9 +24,9 @@ if(isset($_POST['checkboxarray'])){
                  break;
 
            case 'delete':
-                $query="DELETE  FROM posts WHERE post_id={$checkvalue}";
+                $query="DELETE FROM posts WHERE post_id={$checkvalue}";
 			   $delete_bulkpost_query=mysqli_query($connection,$query);
-			   $comments_query="DELETE  FROM comments WHERE comment_post_id={$checkvalue}";
+			   $comments_query="DELETE FROM comments WHERE comment_post_id={$checkvalue}";
 			   $delete_bulkpost_comment_query=mysqli_query($connection,$comments_query);
 			   break;
 
@@ -243,9 +243,11 @@ if(isset($_POST['checkboxarray'])){
           <?php
 
 if(isset($_GET['delete'])){
-$dpost_id=$_GET['delete'];
- $query="DELETE FROM posts WHERE post_id={$dpost_id}"  ;
+    $dpost_id=$_GET['delete'];
+    $query="DELETE FROM posts WHERE post_id={$dpost_id}";
     $delete_post_query=mysqli_query($connection,$query);
+	$comments_query="DELETE FROM comments WHERE comment_post_id={$dpost_id}";
+	$delete_post_comments_query=mysqli_query($connection,$query);
     header("location:posts.php");
 }
 
