@@ -247,7 +247,7 @@ if(isset($_GET['delete'])){
     $query="DELETE FROM posts WHERE post_id={$dpost_id}";
     $delete_post_query=mysqli_query($connection,$query);
 	$comments_query="DELETE FROM comments WHERE comment_post_id={$dpost_id}";
-	$delete_post_comments_query=mysqli_query($connection,$query);
+	$delete_post_comments_query=mysqli_query($connection,$comments_query);
     header("location:posts.php");
 }
 
