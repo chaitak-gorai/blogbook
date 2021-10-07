@@ -16,7 +16,7 @@
 $db['db_host']="remotemysql.com";
 $db['db_user']="dUcPjiYNKu";
 $db['db_pass']="lGB1H36B1r";
-$db['db_name']="DFc7onUv5f";
+$db['db_name']="dUcPjiYNKu";
 
 // $db['db_host']="sql6.freemysqlhosting.net";
 // $db['db_user']="sql6434875";
