@@ -59,7 +59,9 @@
     <!-- Blog Categories Well -->
     <?php
 
-    $query = "SELECT * FROM categories ";
+    $query = "SELECT DISTINCT categories.cat_id, categories.cat_title
+    FROM categories
+    INNER JOIN posts ON categories.cat_id=posts.post_category_id";
     $select_categories_sidebar = mysqli_query($connection, $query);
     ?>
 
