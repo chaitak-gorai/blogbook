@@ -7,3 +7,61 @@
 * Enter your full name, username(unique), email and password.
 * Click on Register button below.
 #### Keep patience! We will approve your request and send a confirmation mail and then you can login in the admin
+
+## Login
+## Contact Us
+
+
+# Homepage Overview
+
+* Post Card -
+* Login/register -
+* Blog search -
+* Blog categories -
+* Top blog posts -
+* Pagination -
+
+
+# Admin Overview
+
+* Dashboard -
+* User online -
+* Logout -
+* Posts
+   * Viee all posts -
+   * Add new post -
+* Categories -
+* Users
+   * View all users -
+   * Add new user -
+* Comments -
+* Profiles 
+   * Update Profile -
+   * View Profile -
+
+ 
+# Posts
+
+## Write your first blog posts.
+
+## View all posts (admin)
+
+## Editing your posts 
+
+# USERS
+
+## User roles
+
+## Add new user (admin)
+
+# COMMENTS
+## how to write a comment
+
+## View/edit Comments (admin)
+
+# PROFILE
+
+## Update Profile (admin)
+
+## PUBLIC PROFILE
+
