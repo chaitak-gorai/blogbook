@@ -1,4 +1,24 @@
-<?php include "includes/ad_header.php" ?>
+<?php
+include "includes/ad_header.php";
+
+$source = '';
+$includeFile = '';
+
+if (isset($_GET['source']) && !empty($_GET['source'])) {
+    $source = $_GET['source'];
+}
+
+switch ($source) {
+    case 'add_post';
+        $includeFile = 'includes/add_post.php';
+        break;
+    case 'edit_post';
+        $includeFile = 'includes/edit_post.php';
+        break;
+    default:
+        $includeFile = 'includes/view_all_posts.php';
+}
+?>
 
 <div id="wrapper">
 
@@ -6,7 +26,6 @@
     <?php include "includes/ad_navigation.php" ?>
 
     <div id="page-wrapper">
-
         <div class="container-fluid">
 
             <!-- Page Heading -->
@@ -15,40 +34,8 @@
                     <h1 class="page-header">
                         All Posts
                     </h1>
-                    <?php
 
-                    if (isset($_GET['source'])) {
-
-                        $source = $_GET['source'];
-                    } else {
-                        $source = '';
-                    }
-                    switch ($source) {
-
-                        case 'add_post';
-                            include "includes/add_post.php";
-                            break;
-
-                        case 'edit_post';
-                            include "includes/edit_post.php";
-                            break;
-
-                        case '340';
-                            echo "NICE 340";
-                            break;
-
-                        default:
-                            include "includes/view_all_posts.php";
-                    }
-
-
-
-
-
-
-
-                    ?>
-
+                    <?php include $includeFile; ?>
 
                 </div>
             </div>
@@ -69,7 +56,6 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script2.js"></script>
-<!-- <script src="https://cdn.tiny.cloud/1/nkozq64khqyq7l925vbf3sk06cauwi9x56geophavrrprqj0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
 <script src="https://cdn.tiny.cloud/1/2lk0dnyg6az318s1tno40pzlxvhfj43be8jhrxauhpjwkltw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script src="js/script.js"></script>
 </body>
