@@ -15,6 +15,7 @@
         $post_content = strip_tags(substr($row['post_content'], 0, 100));
         $post_status = $row['post_status'];
         $post_category_id = $row['post_category_id'];
+        $post_views_count = $row['post_views_count'];
         $query = "SELECT * FROM categories WHERE cat_id={$post_category_id}";
         $select_categories_id = mysqli_query($connection, $query);
         $cat = mysqli_fetch_assoc($select_categories_id);
@@ -37,6 +38,7 @@
                         <div class="date"><?php echo $post_date; ?></div>
                         <div class="tags">
                             <div class="tag"><?php echo $post_category; ?></div>
+                            <div class="tag"><i class="glyphicon glyphicon-eye-open"></i> <?php echo $post_views_count; ?></div>
                         </div>
                     </div>
                 </a>
