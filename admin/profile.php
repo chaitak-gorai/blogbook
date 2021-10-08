@@ -84,32 +84,32 @@ if (isset($_POST['update_user'])) {
                     <form action="" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
-                            <label for="title">Firstname</label>
-                            <input type="text" value="<?= $user_firstname; ?> " class="form-control" name="user_firstname">
+                            <label for="firstname">Firstname</label>
+                            <input type="text" value="<?= $user_firstname; ?> " class="form-control" name="user_firstname" id="firstname">
                         </div>
                         <div class="form-group">
-                            <label for="post_status">Lastname</label>
-                            <input type="text" value="<?= $user_lastname; ?> " class="form-control" name="user_lastname">
+                            <label for="lastname">Lastname</label>
+                            <input type="text" value="<?= $user_lastname; ?> " class="form-control" name="user_lastname" id="lastname">
                         </div>
                         <div class="form-group">
-                            <label for="post_image">User Image</label>
-                            <input type="file" name="user_image">
+                            <label for="userImage">User Image</label>
+                            <input type="file" name="user_image" id="userImage">
                         </div>
                         <div class="form-group">
-                            <label for="title">Short Info</label>
-                            <input type="text" value="<?= $user_info; ?> " class="form-control" name="user_info">
+                            <label for="shortInfo">Short Info</label>
+                            <input type="text" value="<?= $user_info; ?> " class="form-control" name="user_info" id="shortInfo">
                         </div>
                         <div class="form-group">
-                            <label for="title">Username</label>
-                            <input type="text" placeholder="<?= $username; ?> Retype Username" class="form-control" name="username">
+                            <label for="username">Username</label>
+                            <input type="text" placeholder="<?= $username; ?> Retype Username" class="form-control" name="username" id="username">
                         </div>
                         <div class="form-group">
-                            <label for="post_tags">Email</label>
-                            <input type="email" value="<?= $user_email; ?> " class="form-control" name="user_email">
+                            <label for="email">Email</label>
+                            <input type="email" value="<?= $user_email; ?> " class="form-control" name="user_email" id="email">
                         </div>
                         <div class="form-group">
-                            <label for="post_content">Password</label>
-                            <input type="password" placeholder="<?= base64_decode($user_password); ?> Retype Userpassword" name="user_password">
+                            <label for="password">Password</label>
+                            <input type="password" placeholder="<?= base64_decode($user_password); ?> Retype Userpassword" name="user_password" id="password">
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary" name="update_user" value="Update Profile">
