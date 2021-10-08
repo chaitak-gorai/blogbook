@@ -1,15 +1,14 @@
 <?php ob_start(); ?>
 <?php session_start(); ?>
-<?php include "../includes/db.php" ?>
-<?php include "functions.php" ?>
 
 <?php
+include "../includes/db.php";
+include "functions.php";
 
-if (!isset($_SESSION['user_role'])) {
+
+// redirect to home page if user not logged in or subscriber
+if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] == 'subscriber') {
     header("Location: ../index.php");
-    if ($_SESSION['user_role'] == 'subscriber') {
-        header("Location: ../index.php");
-    }
 }
 ?>
 
