@@ -23,32 +23,17 @@
                 $query = "SELECT * FROM categories WHERE cat_id={$link_category}";
                 $select_categories_id = mysqli_query($connection, $query);
                 $cat = mysqli_fetch_assoc($select_categories_id);
-                $post_category = $cat['cat_title'];
                 ?>
-                <h1 class="text-center" style="color:white;"><?php echo $post_category; ?>-Blog Posts</h1>
+                <h1 class="text-center" style="color:white;"><?php echo $cat['cat_title']; ?>-Blog Posts</h1>
                 <?php
                 $query = "SELECT * FROM posts WHERE post_category_id=$link_category";
                 $select_all_posts_query = mysqli_query($connection, $query);
 
                 $render = include_once __DIR__ . "/includes/post-view.php";
                 while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
-                    $render($row);
+                    $render($row, $cat);
                 }
                 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
