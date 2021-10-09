@@ -10,13 +10,14 @@
 
 
 ## Steps to Login in Blogbook:
-* To login into the website, enter your username and password on the top right side.
-* Click on the 'Login' button near the password box.
-#### You will be logged in your original account!
+* Click on Login in navbar to go to login section.
+* Enter your original username and password to log in to your account.
+* If ur credentioals are matched you will be login to the admin
+* If your credentials are wrong the page will reloads. We are working on this issue to show an error.
 
 
 ## Contact Us:
-* To react out to us, click on the 'Contact' button present on the top right hand side of the website(near Register button).
+* To reach out to us, click on the 'Contact' button present on the top right hand side of the website(near Register button).
 * A tab to Contact Us will open.
 * Enter your full name, email, subject and the message you want to send to us.
 * Click on the Send button to send the message to us.
