@@ -8,13 +8,19 @@
 * Click on Register button below.
 #### Keep patience! We will approve your request and send a confirmation mail and then you can login in the admin
 
+
 ## Steps to Login in Blogbook:
 * To login into the website, enter your username and password on the top right side.
 * Click on the 'Login' button near the password box.
 #### You will be logged in your original account!
 
-## Contact Us
 
+## Contact Us:
+* To react out to us, click on the 'Contact' button present on the top right hand side of the website(near Register button).
+* A tab to Contact Us will open.
+* Enter your full name, email, subject and the message you want to send to us.
+* Click on the Send button to send the message to us.
+#### Keep patience! We will see to your message soon and reach out to you as early as possible.
 
 # Homepage Overview
 
