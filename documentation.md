@@ -8,7 +8,11 @@
 * Click on Register button below.
 #### Keep patience! We will approve your request and send a confirmation mail and then you can login in the admin
 
-## Login
+## Steps to Login in Blogbook:
+* To login into the website, enter your username and password on the top right side.
+* Click on the 'Login' button near the password box.
+#### You will be logged in your original account!
+
 ## Contact Us
 
 
