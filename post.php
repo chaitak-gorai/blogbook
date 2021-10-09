@@ -39,6 +39,7 @@
                         // $post_content = strip_tags($row['post_content'], "");
                         $post_category_id = $row['post_category_id'];
                         $post_comment = $row['post_comment_count'];
+                        $post_views_count = $row['post_views_count'];
                         $query = "SELECT * FROM categories WHERE cat_id={$post_category_id}";
                         $select_categories_id = mysqli_query($connection, $query);
                         $cat = mysqli_fetch_assoc($select_categories_id);
@@ -82,6 +83,12 @@
   font-size:15px;
   width:fit-content;
   text-align:left;"><?php echo $post_comment; ?></i>
+                            <i class="glyphicon glyphicon-eye-open" style=" background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  padding: 0.4rem 1rem;
+  border-radius: 3rem;
+  font-size:15px;
+  width:fit-content;
+  text-align:left;"><?php echo $post_views_count; ?></i>
 
 
 
@@ -155,13 +162,13 @@
                     $comment_author =  $_POST['comment_author'];
                     $comment_email =  $_POST['comment_email'];
                     $comment_content =  $_POST['comment_content'];
+		    $comment_content_wo_quote = mysqli_real_escape_string($connection, $comment_content);
 
 
-
-                    if (!empty($comment_author) && !empty($comment_email) && !empty($comment_content)) {
+                    if (!empty($comment_author) && !empty($comment_email) && !empty($comment_content_wo_quote)) {
 
                         $query = "INSERT INTO comments (comment_post_id,comment_author,comment_email,comment_content,comment_status,comment_date) ";
-                        $query .= "VALUES ($link_post_id,'{$comment_author}','{$comment_email}','{$comment_content}','unapproved',now())";
+                        $query .= "VALUES ($link_post_id,'{$comment_author}','{$comment_email}','{$comment_content_wo_quote}','unapproved',now())";
 
                         $create_comment_query = mysqli_query($connection, $query);
                         if (!$create_comment_query) {
@@ -170,10 +177,7 @@
 
                         $query = "UPDATE posts SET post_comment_count= post_comment_count + 1 WHERE post_id=$link_post_id";
                         $update_comment_count = mysqli_query($connection, $query);
-                    } else {
-
-                        echo "<script>alert('Fileds Cannot Be empty')</script>";
-                    }
+                    } 
                 }
 
 
@@ -185,7 +189,7 @@
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form action="" method="post" role="form">
+                    <form action="" method="post" role="form" id="comment-form">
 
                         <div class="form-group">
                             <label for="author">Author</label>
@@ -200,7 +204,8 @@
                             <label for="content">Comment</label>
                             <textarea class="form-control" name="comment_content" rows="3"></textarea>
                         </div>
-                        <button type="submit" name="create_comment" class="btn btn-primary">Submit</button>
+                        <div class="comment-form-error"></div>
+                        <button type="submit" name="create_comment" value="1" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
 
