@@ -24,13 +24,15 @@ return function (array $row, array $currentCategory = []) use ($connection) {
         $post_category = $currentCategory['cat_title'];
     }
 ?>
-    <div class="row" style="margin-top: 10px; padding: 0 15px;">
+    <div class="row" style="margin-top: 10px;">
         <div class="col-6">
             <article class="blog-card" style="z-index: 100;">
                 <div class="blog-card__background">
                     <div class="card__background--wrapper">
+                        <!-- <div class="card__background--main" style="background-image: url('images/<?php echo $post_image; ?>');"> -->
                         <div class="card__background--main">
-                            <img src="images/<?php echo $post_image; ?>" alt="" style="width: 100%; height: 50vh;">
+                            <img src="images/<?php echo $post_image; ?>" alt=""
+                                 style="  max-width: 100%;     height: fit-content;">
                             <div class="card__background--layer"></div>
                         </div>
                     </div>
