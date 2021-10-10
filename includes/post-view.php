@@ -24,7 +24,7 @@ return function (array $row, array $currentCategory = []) use ($connection) {
         $post_category = $currentCategory['cat_title'];
     }
 ?>
-    <div class="row" style="margin-top: 10px;">
+    <div class="row" style="margin-top: 10px; padding: 0 15px;">
         <div class="col-6">
             <article class="blog-card" style="z-index: 100;">
                 <div class="blog-card__background">
