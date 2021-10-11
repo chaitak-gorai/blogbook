@@ -16,3 +16,5 @@
 * [Shubham Jha](https://github.com/shubhamjha25)
 * [Kaique Garcia](https://github.com/kaiquegarcia)
 * [Hunter Bertoson](https://github.com/hkbertoson)
+* [Gergo Juhasz](https://github.com/geryjuhasz)
+* [Dominik Kocis](https://github.com/dominikk12)

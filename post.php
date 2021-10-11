@@ -162,13 +162,13 @@
                     $comment_author =  $_POST['comment_author'];
                     $comment_email =  $_POST['comment_email'];
                     $comment_content =  $_POST['comment_content'];
+		    $comment_content_wo_quote = mysqli_real_escape_string($connection, $comment_content);
 
 
-
-                    if (!empty($comment_author) && !empty($comment_email) && !empty($comment_content)) {
+                    if (!empty($comment_author) && !empty($comment_email) && !empty($comment_content_wo_quote)) {
 
                         $query = "INSERT INTO comments (comment_post_id,comment_author,comment_email,comment_content,comment_status,comment_date) ";
-                        $query .= "VALUES ($link_post_id,'{$comment_author}','{$comment_email}','{$comment_content}','unapproved',now())";
+                        $query .= "VALUES ($link_post_id,'{$comment_author}','{$comment_email}','{$comment_content_wo_quote}','unapproved',now())";
 
                         $create_comment_query = mysqli_query($connection, $query);
                         if (!$create_comment_query) {

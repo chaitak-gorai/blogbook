@@ -1,5 +1,5 @@
 <?php
-return function (array $row) use ($connection) {
+return function (array $row, array $currentCategory = []) use ($connection) {
     $post_title = $row['post_title'];
     $post_id = $row['post_id'];
     $post_author = $row['post_author'];
@@ -11,12 +11,17 @@ return function (array $row) use ($connection) {
     $post_category_id = $row['post_category_id'];
     $post_comment = $row['post_comment_count'];
     $post_views_count = $row['post_views_count'];
-    $query = "SELECT * FROM categories WHERE cat_id={$post_category_id}";
-    $select_categories_id = mysqli_query($connection, $query);
-    $cat = mysqli_fetch_assoc($select_categories_id);
-    $post_category = $cat['cat_title'];
     if ($post_status !== 'published') {
         return;
+    }
+    if (empty($currentCategory)) {
+        // TODO: create CategoryRepository to centralize those calls
+        $query = "SELECT * FROM categories WHERE cat_id={$post_category_id}";
+        $select_categories_id = mysqli_query($connection, $query);
+        $cat = mysqli_fetch_assoc($select_categories_id);
+        $post_category = $cat['cat_title'];
+    } else {
+        $post_category = $currentCategory['cat_title'];
     }
 ?>
     <div class="row" style="margin-top: 10px;">
