@@ -36,7 +36,7 @@
                 <div>
                     <h1><?php echo $author_username; ?></h1>
                     <p><?php echo $user_info; ?></p>
-                    <div class="date"><h1><?php echo $counter; ?></h1></div>
+                    <div class="date"><h1><?php echo $counter; ?>.</h1></div>
                     <div class="tag"><p>Totall page views: </p></div>
                     <div class="tags">
                         <div class="tag"><i class="glyphicon glyphicon-eye-open"></i> <?php echo $view_count; ?></div>
