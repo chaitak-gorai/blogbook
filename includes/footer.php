@@ -16,11 +16,10 @@
 
      <div class="col-lg-12 credits ">
          Blogbook &copy 2021
-         </div>
-   <div>
-   <img src="images/github-icon.svg" alt="github-icon" width="35" height="35">
+   <br>
+     <img src="images/github-icon.svg" alt="github-icon" width="35" height="35">
         <a href="https://github.com/chaitak-gorai/blogbook">Github</a>
-   </div>
+     </div>
 
  </footer>
  <!-- <footer>
