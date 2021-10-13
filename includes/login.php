@@ -30,10 +30,7 @@ if (isset($_POST['login'])) {
   if (!empty($username) && !empty($password)) {
     $password_db = base64_decode($db_user_password);
 
-    if ($username !== $db_username && $password !== $password_db) {
-      header("Location: ../index.php");
-    } else if ($username == $db_username && $password == $password_db) {
-
+    if ($username == $db_username && $password == $password_db) {
       if ($db_user_role !== 'new') {
         $_SESSION['username'] = $db_username;
         $_SESSION['user_id'] = $db_user_id;
@@ -44,12 +41,17 @@ if (isset($_POST['login'])) {
 
 
 
-        header("Location:../admin/index.php");
+        header("Location: ../admin/index.php");
       } else {
         header("Location: ../index.php");
       }
     } else {
-      header("Location: ../index.php");
+      $login_parameter = "";
+      if (!strpos($_SERVER['HTTP_REFERER'], "log=wrong")) {
+        $login_parameter = strpos($_SERVER['HTTP_REFERER'], "=") ? "&" : "?";
+        $login_parameter = $login_parameter . "log=wrong";
+      }
+      header('Location: ' . $_SERVER['HTTP_REFERER'] . $login_parameter);
     }
 
     //  }  else 

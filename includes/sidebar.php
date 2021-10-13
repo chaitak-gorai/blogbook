@@ -21,8 +21,16 @@
         </form>
         <!-- /.input-group -->
     </div>
-
-
+    <?php
+        if (isset($_GET['log'])) {
+            ?>
+            <div class="alert alert-danger" style="display:flex;align-items: center;justify-content: space-between;">
+                <span>Incorrect username or password.</span>
+                <button class="btn btn-danger" onClick="this.parentElement.style.display='none';"><bold>X</bold></button> 
+            </div>
+        <?php
+        }
+    ?>
     <div class="well logs" id="login">
         <div class="heads">
             <h4>Login</h4>
