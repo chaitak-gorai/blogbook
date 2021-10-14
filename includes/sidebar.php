@@ -97,6 +97,12 @@
     <!-- Side Widget Well -->
     <?php include "widget.php" ?>
 </div>
+
+     <!-- Top Authors widget -->               
+<div>
+<?php include "top-authors.php" ?>
+</div>
+
 <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 <script>
     AOS.init({
