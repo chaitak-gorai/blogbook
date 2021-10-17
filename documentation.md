@@ -70,6 +70,7 @@
 * To comment on any post, click on the read more option of any blog present in the homepage.
 * A new page will open where you can comment on the post.
 * Enter the author name, email id and the comment you want to post on the blog and then click on the submit button.
+#### The comment will be first approved by the post writer then it will be shown!
 
 ## View/edit Comments (admin)
 
