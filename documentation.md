@@ -23,9 +23,9 @@
 * Click on the Send button to send the message to us.
 #### Keep patience! We will see to your message soon and reach out to you as early as possible.
 
-# Homepage Overview
+# Homepage Overview:
 
-* Post Card -
+* Post Card - 
 * Login/register -
 * Blog search -
 * Blog categories -
@@ -65,8 +65,12 @@
 
 ## Add new user (admin)
 
-# COMMENTS
-## how to write a comment
+# COMMENTS:
+## How to write a comment
+* To comment on any post, click on the read more option of any blog present in the homepage.
+* A new page will open where you can comment on the post.
+* Enter the author name, email id and the comment you want to post on the blog and then click on the submit button.
+#### The comment will be first approved by the post writer then it will be shown!
 
 ## View/edit Comments (admin)
 
