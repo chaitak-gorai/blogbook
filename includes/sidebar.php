@@ -21,40 +21,8 @@
         </form>
         <!-- /.input-group -->
     </div>
-
-
-    <div class="well logs" id="login">
-        <div class="heads">
-            <h4>Login</h4>
-            <form action="includes/login.php" method="post" id="login_form" onsubmit="return validate_form()">
-
-
-                <div class="form-group">
-                    <input name="username" type="text" class="form-control" placeholder="Enter Username" id="user_name">
-
-                </div>
-
-                <div class="input-group">
-                    <input name="password" type="password" class="form-control" placeholder="Enter Password" id="user_pass">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary" name="login" type="submit">
-                            Login
-                        </button>
-
-                    </span>
-
-                </div>
-            </form>
-            <h4 style="text-align: center;">OR</h4>
-            <a href="../registration.php">
-                <button class="btn btn-success form-control" name="login" type="submit" value="Register">
-                    Register
-                </button> </a>
-
-            <!-- /.input-group -->
-        </div>
-    </div>
-
+    
+    <?php include "widget-login.php" ?>
 
     <!-- Blog Categories Well -->
     <?php
@@ -108,43 +76,4 @@
     AOS.init({
         duration: 1200,
     })
-</script>
-<script>
-    function showError(error, alrt) {
-
-        const card = document.querySelector('.logs');
-        const head = document.querySelector('.heads');
-
-
-        const errordiv = document.createElement('div');
-
-        errordiv.className = alrt;
-        errordiv.appendChild(document.createTextNode(error));
-        card.insertBefore(errordiv, head);
-
-        setTimeout(clearError, 3000);
-
-    }
-
-    function clearError() {
-        document.querySelector('.alert').remove();
-    }
-</script>
-<script type='text/javascript'>
-    function validate_form() {
-        // document.getElementById('regis-form').addEventListener('submit', function(event) {
-        //     event.preventDefault();
-        const user = document.getElementById('user_name').value;
-
-        const pass = document.getElementById('user_pass').value;
-
-
-
-        // generate a five digit number for the contact_number variable
-        if (user == "" || pass == "") {
-            showError('Fields Cannot be Empty!', 'alert alert-danger');
-
-            return false;
-        }
-    }
 </script>
