@@ -39,7 +39,7 @@
                             
                                  <td>{$user_id}</td>
                                    <td><a href='../user.php?u_id={$user_id}'>{$username}</a></td>
-                                   <td>{$user_firstname}</td>";
+                                   <td class='emailjs'>{$user_firstname}</td>";
                                    
                                    
 //                                          $query="SELECT * FROM categories WHERE cat_id={$post_category_id}" ;                   $select_categories_id=mysqli_query($connection,$query);   
@@ -70,8 +70,8 @@
             if($user_role=='admin'){                    
                                    echo "
                                    
-                                   <td><a href='users.php?change2admin={$user_id}'>Admin</a> </td>
-                                    <td><a href='users.php?change2sub={$user_id}'>Subscriber</a> </td>
+                                   <td ><a href='users.php?change2admin={$user_id}' class='emailjs'>Admin</a> </td>
+                                    <td ><a href='users.php?change2sub={$user_id}' class='emailjs'>Subscriber</a> </td>
                                        <td><a href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a> </td>
                                    <td><a href='users.php?delete={$user_id}'>Delete</a> </td>";
                                    
@@ -157,3 +157,40 @@ $duser_id=$_GET['delete'];
 
 
 ?>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_I6EygmjyHE3cr6faWnUR9");
+})();
+</script>
+
+<script type='text/javascript'>
+    document.querySelectorAll('.emailjs').forEach(el=>{
+        el.addEventListener('click', function(event){
+  
+        var row=event.target.parentNode.parentNode;
+  var data=row.querySelectorAll('td');
+  console.log(row);
+  const username=data[1].textContent;
+  const user=data[2].textContent;  
+  const user_email=data[4].textContent;
+  const user_role=el.textContent;
+
+
+
+  var templateParams = {
+user: user,
+username: username,
+user_email: user_email,
+user_role: user_role
+};
+ 
+emailjs.send('service_ahstaa2', 'template_gasl2ir', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!');
+    }, function(error) {
+       console.log('FAILED...');
+    });
+
+    })});
+</script>
