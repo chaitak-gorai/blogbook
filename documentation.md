@@ -27,7 +27,7 @@
 
 * Post Card - 
 * Login/register - Present on the top right corner of the website.
-* Blog search -
+* Blog search - Present on the top right corner, just below register/login button.
 * Blog categories -
 * Top blog posts -
 * Pagination -
