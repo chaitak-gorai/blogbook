@@ -20,6 +20,7 @@
        
 
                 // these IDs from the previous steps
+                
                 emailjs.sendForm('service_jqqodmg', 'template_3d56csi',this)
                     .then(function() {
                         console.log('SUCCESS!');
@@ -29,9 +30,13 @@
             });
         }
     </script>
-</head>
+
+    </head>
+    
 <body>
+    
     <form id="contact-form">
+       
         <input type="hidden" name="contact_number" >
         <label>Name</label>
         <input type="text" name="from_name" id="name">
@@ -40,6 +45,9 @@
         <label>Message</label>
         <textarea name="message" id="msg"></textarea>
         <input type="submit" value="Send">
+    
     </form>
-</body>
-</html>
+
+ </body>
+
+    </html>
