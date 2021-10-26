@@ -26,7 +26,7 @@
 # Homepage Overview:
 
 * Post Card - 
-* Login/register -
+* Login/register - Present on the top right corner of the website.
 * Blog search -
 * Blog categories -
 * Top blog posts -
