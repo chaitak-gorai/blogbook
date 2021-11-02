@@ -90,6 +90,73 @@
   width:fit-content;
   text-align:left;"><?php echo $post_views_count; ?></i>
 
+<!-- Likes button -->   
+                    <button id="likebtn" type="button" class="btn btn-dark"  style="
+                            padding: 0.09rem 1.2rem 0.05rem;
+                            border-radius: 0.8rem;
+                            font-size:15px;
+                            width:80px;
+                            text-align:left;
+                            border:none; 
+                            outline: none;
+                            background: darkgrey;">
+                            <i class="fas fa-thumbs-up" ></i>                    
+                            <input type="number" id="input1" value ="<?php echo $post_likes; ?>" style="width: 3px; border:none; outline: none; background:none; padding: 0.4rem 1rem;
+                            font-size:15px; width:70px; text-align:left;"></input>    
+                    </button>
+                    </p>
+                        <script>
+                            let likebtn = document.querySelector('#likebtn');
+                            let input = document.querySelector('#input1'); 
+
+                            //local storage - saving ID of liked post
+                            var likedID = parseInt('<?php echo $link_post_id ?>');
+                            var likedIDhistory = JSON.parse(localStorage.getItem("arrayOfLikedPosts")) || [];
+                            var isLiked = false;
+
+                            for (var i = 0; i < likedIDhistory.length; i++){
+                                var arrayLS = JSON.parse(localStorage["arrayOfLikedPosts"]);
+                                var actual = arrayLS[i];
+                                
+                                if(likedID == actual) {
+                                    isLiked= true;
+                                    console.log("true");
+                                }                            
+                            }
+
+                            //if is not liked by "user"
+                            if (isLiked == false) {                                                       
+       
+                            likebtn.addEventListener('click', likes_function=>
+                            {
+                            input1.value = <?php echo $post_likes?> + 1;
+                            input.style.color = "#a1c4fd";
+
+                            <?php
+                            $like_query = "UPDATE posts SET post_likes_count=post_likes_count +1 WHERE post_id=$link_post_id";
+                            $send_query2 = mysqli_query($connection, $like_query);
+
+                            $query2 = "SELECT * FROM posts WHERE post_id=$link_post_id";
+                            $like_post_query = mysqli_query($connection, $query2);
+                            ?>  
+
+                            likedIDhistory.push(likedID);
+                            localStorage.setItem("arrayOfLikedPosts", JSON.stringify(likedIDhistory));
+                            document.getElementById("likebtn").disabled = true;
+                            document.getElementById("likebtn").style.opacity=0.5; 
+                         });
+
+
+                            //if is already liked by "user"
+                            } else {
+                                document.getElementById("likebtn").disabled = true;
+                                document.getElementById("likebtn").style.opacity=0.5;
+                            }                  
+
+                        </script>
+
+
+                            </p>
 
 
 
