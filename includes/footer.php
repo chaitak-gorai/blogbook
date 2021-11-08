@@ -45,7 +45,7 @@
  <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 
  <script src="js/checkComment.js"></script>
-
+<script src="js/like_system.js"></script>
 
  </body>
 
