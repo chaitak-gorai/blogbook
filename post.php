@@ -78,13 +78,13 @@
                 <!-- likes button -->
 
                 <button id="likebtn" type="button" class="btn btn-sml btn-danger" style="width:70px;">
-                        <i class="glyphicon glyphicon-thumbs-up"> </i>
-                    <input type="number" id="input1" value ="<?php echo $post_likes; ?>" style="border:none; outline: none; background:none; width:50px; text-align:left;"></input></button>
+                        <i class="glyphicon glyphicon-thumbs-up"> </i> <?php echo $post_likes; ?>
+               <!--     <input type="number" id="input1" value ="" style="border:none; outline: none; background:none; width:50px; text-align:left;"></input> -->
+            </button>
             
                                 
                 <script>
                     let likebtn = document.querySelector('#likebtn');
-                    let input = document.querySelector('#input1'); 
 
                     //local storage - saving ID of liked post
                     var likedID = parseInt('<?php echo $link_post_id ?>');
@@ -119,8 +119,9 @@
                         
                             //increace likes
                             if(Http.responseText == "true") {
-                                input1.value = <?php echo $post_likes?> + 1;
-                                input.style.color = "#a1c4fd";
+                                likebtn.value = <?php echo $post_likes?> + 1;
+                                likebtn.innerHTML = <?php echo $post_likes?> + 1;
+                                likebtn.style.color = "#a1c4fd";
 
                                 likedIDhistory.push(likedID);
                                 localStorage.setItem("arrayOfLikedPosts", JSON.stringify(likedIDhistory));
