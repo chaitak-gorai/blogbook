@@ -11,7 +11,6 @@ return function (array $row, array $currentCategory = []) use ($connection) {
     $post_category_id = $row['post_category_id'];
     $post_comment = $row['post_comment_count'];
     $post_views_count = $row['post_views_count'];
-    $post_likes_count = $row['post_likes_count'];
     if ($post_status !== 'published') {
         return;
     }
@@ -57,9 +56,6 @@ return function (array $row, array $currentCategory = []) use ($connection) {
                         </div>
                     </h5>
                     <p>
-                        
-                        <button type="button" class="btn btn-sml btn-info"><i
-                                    class="glyphicon glyphicon-calendar"> <?php echo $post_date; ?></i></button>
                         <button type="button" class="btn btn-sml btn-primary"><i
                                     class="glyphicon glyphicon-tags"> <?php echo $post_category; ?></i></button>
 
@@ -69,8 +65,6 @@ return function (array $row, array $currentCategory = []) use ($connection) {
                                     class="	glyphicon glyphicon-comment"> <?php echo $post_comment; ?></i></button>
                         <button type="button" class="btn btn-sml btn-success"><i
                                     class="glyphicon glyphicon-eye-open"></i> <?php echo $post_views_count; ?></button>
-                        <button type="button" class="btn btn-sml btn-danger"><i
-                                    class="glyphicon glyphicon-thumbs-up"></i> <?php echo $post_likes_count; ?></button>
                     </p>
                     <p><a href="post.php?p_id=<?php echo $post_id; ?>"
                           style="text-decoration:none"><?php echo $post_content; ?></a></p>
