@@ -78,13 +78,14 @@
                 <!-- likes button -->
 
                 <button id="likebtn" type="button" class="btn btn-sml btn-danger" style="width:70px;">
-                        <i class="glyphicon glyphicon-thumbs-up"> </i> <?php echo $post_likes; ?>
+                        <i class="glyphicon glyphicon-thumbs-up"> </i> <span class="likes"><?php echo $post_likes; ?></span>
                <!--     <input type="number" id="input1" value ="" style="border:none; outline: none; background:none; width:50px; text-align:left;"></input> -->
             </button>
             
                                 
                 <script>
-                    let likebtn = document.querySelector('#likebtn');
+                    const likeBtn = document.querySelector('#likebtn');
+                    const likeBtnLabel = likeBtn.querySelector('.likes')
 
                     //local storage - saving ID of liked post
                     var likedID = parseInt('<?php echo $link_post_id ?>');
@@ -97,14 +98,14 @@
                         
                         if(likedID == actual) {
                             isLiked= true;
-                            console.log("true");
+                            //console.log("true");
                         }                            
                     }
 
                     //if is not liked by "user"
                     if (isLiked == false) {                                                      
 
-                    likebtn.addEventListener('click', likes_function=>
+                    likebtn.addEventListener('click', ()=>
                     {
                         // http request (ajax)
                         const Http=new XMLHttpRequest();
@@ -120,13 +121,13 @@
                             //increace likes
                             if(Http.responseText == "true") {
                                 likebtn.value = <?php echo $post_likes?> + 1;
-                                likebtn.innerHTML = <?php echo $post_likes?> + 1;
+                                likeBtnLabel.innerText = <?php echo $post_likes?> + 1
                                 likebtn.style.color = "#a1c4fd";
 
                                 likedIDhistory.push(likedID);
                                 localStorage.setItem("arrayOfLikedPosts", JSON.stringify(likedIDhistory));
-                                document.getElementById("likebtn").disabled = true;
-                                document.getElementById("likebtn").style.opacity=0.5;
+                                likeBtn.disabled = true;         
+                                likeBtn.style.opacity = 0.5;
                             }                                                        
                         }                                         
                     });
