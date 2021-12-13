@@ -22,6 +22,7 @@
                     $link_post_id = $_GET['p_id'];
 
                     $view_query = "UPDATE posts SET post_views_count=post_views_count +1 WHERE post_id=$link_post_id";
+
                     $send_query = mysqli_query($connection, $view_query);
 
                     $query = "SELECT * FROM posts WHERE post_id=$link_post_id";
@@ -34,7 +35,13 @@
                         $post_author = $row['post_author'];
                         $post_author_id = $row['author_id'];
                         $post_date = $row['post_date'];
-                        $post_image = $row['post_image'];
+                        if( !empty($row['post_image'])  ) {
+                        echo '<img class= "img-responsive" src="images/'.$post_image = $row['post_image'].'"  >';
+                        }
+                        else {
+                         echo '<img class= "img-responsive" src="images/default.png" >';
+                        }
+                        //$post_image = $row['post_image']; //TUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
                         $post_content = $row['post_content'];
                         // $post_content = strip_tags($row['post_content'], "");
                         $post_category_id = $row['post_category_id'];
@@ -103,9 +110,7 @@
 
                             </p>
 
-                            <hr>
-                            <img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
-                            <hr>
+                          
                             <div class="content"><?php echo $post_content; ?></div>
                         </div>
 
